@@ -1,0 +1,1336 @@
+%% FORMLÆRE: MATHEMATICA
+%% The Formal Mathematical Companion to Tractatus Formae
+%% Iver Raknes Finne, Institute of Design, AHO
+%%
+%% This document contains the complete axiomatic-deductive structure
+%% underlying Tractatus Formae: all definitions, postulates, theorems,
+%% and proofs referenced via [M: ...] in the tractate.
+%%
+%% Compiled with: pdflatex → biber → pdflatex × 2
+
+\documentclass[11pt, a4paper]{article}
+
+%% ── Encoding & fonts ──────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ebgaramond}            % Match Tractatus Formae typography
+
+%% ── Mathematics ───────────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{thmtools}
+\usepackage{bm}                    % Bold math
+\usepackage{dsfont}                % Double-stroke font for \mathds
+
+%% ── Layout ────────────────────────────────────────────────────────
+\usepackage[
+  top=30mm, bottom=35mm,
+  left=32mm, right=32mm
+]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+%% ── References & links ───────────────────────────────────────────
+\usepackage[
+  backend=biber,
+  style=authoryear-comp,
+  sorting=nyt,
+  maxcitenames=2
+]{biblatex}
+\addbibresource{../references.bib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+
+%% ── Theorem environments ─────────────────────────────────────────
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{postulate}[definition]{Postulate}
+\newtheorem{proposition}[definition]{Proposition}
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem{example}[definition]{Example}
+
+%% ── Custom commands ──────────────────────────────────────────────
+\newcommand{\MC}{M^{\mathsf{I}}_C}          % Morphospace
+\providecommand{\Rn}{}
+\renewcommand{\Rn}{\mathbf{R}^n}            % n-dim Euclidean space
+\providecommand{\R}{}
+\renewcommand{\R}{\mathbf{R}}               % Reals
+\newcommand{\NN}{\mathbf{N}}                 % Naturals
+\newcommand{\Pareto}{\mathcal{P}}            % Pareto front
+\newcommand{\FitLand}{\mathcal{L}}           % Fitness landscape
+\newcommand{\Nav}{\mathcal{N}}               % Navigator
+\newcommand{\CogBound}{\partial\!\Nav}       % Cognitive boundary
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\DeclareMathOperator{\grad}{\nabla}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Int}{int}
+\DeclareMathOperator{\MI}{I}                 % Mutual information
+\DeclareMathOperator{\Ent}{H}                % Shannon entropy
+\DeclareMathOperator{\argmax}{arg\,max}
+
+%% ── Section formatting (small caps, centered) ────────────────────
+\titleformat{\section}
+  {\normalfont\large\scshape\centering}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\itshape}
+  {\thesubsection}{1em}{}
+
+%% ── Tractatus cross-reference command ────────────────────────────
+\newcommand{\TF}[1]{\textnormal{[TF\,#1]}}  % Cross-ref to Tractatus Formae
+
+%% ══════════════════════════════════════════════════════════════════
+\begin{document}
+
+%% ── Title page ───────────────────────────────────────────────────
+\begin{titlepage}
+\centering
+\vspace*{4cm}
+{\Large\scshape Forml\ae re: Mathematica}
+
+\vspace{1cm}
+{\large\itshape The Axiomatic--Deductive Companion to\\[4pt]
+Tractatus Formae}
+
+\vspace{2cm}
+{\normalsize Iver Raknes Finne}
+
+\vspace{0.5cm}
+{\small Institute of Design, Oslo School of Architecture and Design}
+
+\vspace{4cm}
+{\small 2026}
+
+\vfill
+{\footnotesize
+Cross-references to the tractate are marked \TF{\ldots}.\\
+Every definition, postulate, and theorem listed in the Tractatus Formae\\
+appendix ``Formell korrespondanse'' finds its proof here.}
+\end{titlepage}
+
+%% ── Table of contents ────────────────────────────────────────────
+\tableofcontents
+\newpage
+
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 0: PREAMBLE
+%% ══════════════════════════════════════════════════════════════════
+\section*{Preamble}
+\addcontentsline{toc}{section}{Preamble}
+
+This document provides the complete formal apparatus underlying
+\textit{Tractatus Formae}. Where the tractate argues in natural language,
+this companion argues in set theory, topology, optimization theory,
+information theory, and dynamical systems. Every definition, postulate,
+and theorem referenced via \textup{[M:\,\ldots]} in the tractate appears
+here with its full proof.
+
+\medskip\noindent\textbf{Logical architecture.}
+The theory rests on five \emph{postulates}---empirically falsifiable
+assumptions about the world---from which all theorems follow deductively.
+The postulates are:
+\begin{enumerate}[nosep]
+  \item \textbf{Postulate~2.3}\; (Multiple independent pressures)
+  \item \textbf{Postulate~2.6}\; (Conflicting gradients)
+  \item \textbf{Postulate~4.1}\; (Dynamic landscape)
+  \item \textbf{Postulate~5.1}\; (Geometric material signature)
+  \item \textbf{Postulate~7.1}\; (Substrate-independent navigation)
+\end{enumerate}
+Two additional postulates appear in the variational extension:
+Postulate~9.1 (path-dependent fitness) and its empirical derivative
+(spreading hypothesis, Theorem~9.4).
+
+\medskip\noindent\textbf{Notation.}
+We write $\MC$ for the morphospace of class $C$ (Def.~1.1),
+$s_i$ for the $i$-th selection pressure (Def.~2.1),
+$\bm{s}$ for the selection-pressure vector (Def.~2.2),
+$f$ for the fitness function (Def.~3.1),
+$\FitLand$ for the fitness landscape (Def.~3.2),
+and $\Nav$ for a navigator (Def.~6.1).
+The gradient of a scalar field $g$ is $\grad g$.
+Shannon entropy is $\Ent$, mutual information is $\MI$.
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 1: MORPHOSPACE
+%% ══════════════════════════════════════════════════════════════════
+\section{Morphospace}\label{sec:morphospace}
+
+\begin{definition}[Morphospace]\label{def:1.1}
+Let $C$ be a functional class of objects (e.g.\ chairs, knives, vessels)
+and let $x_1, x_2, \ldots, x_n$ be $n$ measurable geometric properties
+that characterize objects in $C$ (height, width, mass, curvature,
+symmetry, compactness, etc.).
+
+For any object $a \in C$, its \emph{attribute vector} is
+\[
+  \bm{x}(a) = \bigl(x_1(a),\; x_2(a),\; \ldots,\; x_n(a)\bigr) \in \Rn.
+\]
+The \emph{morphospace} of class $C$ is the set
+\[
+  \MC \;=\; \bigl\{\, \bm{x} \in \Rn
+    \;\big|\; \bm{x} \text{ satisfies the physical and functional
+    constraints of } C \,\bigr\}
+\]
+equipped with the Euclidean metric $d(\bm{x}, \bm{y}) = \norm{\bm{x} - \bm{y}}_2$.
+\end{definition}
+
+\begin{definition}[Feasibility constraints]\label{def:1.2}
+Let $\{g_j\}_{j=1}^{m}$ be a finite set of constraint functions
+$g_j : \Rn \to \R$ encoding physical laws, material limits, and
+functional requirements. The morphospace is the feasible set:
+\[
+  \MC \;=\; \bigl\{\, \bm{x} \in \Rn
+    \;\big|\; g_j(\bm{x}) \leq 0 \;\;\forall\, j = 1, \ldots, m
+  \,\bigr\} \;\subseteq\; \Rn.
+\]
+We assume each $g_j$ is continuous, so that $\MC$ is a closed subset
+of\/ $\Rn$. If additionally the property ranges are bounded (which holds
+for all physical objects), then $\MC$ is \emph{compact}.
+\end{definition}
+
+\begin{remark}
+Compactness of\/ $\MC$ is not a mathematical convenience but a physical
+fact: no chair has infinite height, negative mass, or unbounded curvature.
+Compactness guarantees that continuous functions on $\MC$ attain their
+extrema (Weierstrass), which is essential for the existence of optima in
+the fitness landscape (\S\ref{sec:landscape}).
+\end{remark}
+
+\begin{definition}[Region typology]\label{def:1.3}
+The full ambient space $\Rn$ partitions into three regions relative to
+the class $C$:
+\begin{enumerate}[label=(\roman*),nosep]
+  \item \textbf{Busett (occupied) region} $B$:
+    \[
+      B \;=\; \bigl\{\, \bm{x} \in \MC
+        \;\big|\; \bm{x} = \bm{x}(a) \text{ for at least one
+        realized object } a \in C \,\bigr\}.
+    \]
+    Formally, $B = \supp(\mu)$ where $\mu$ is the empirical measure
+    on $\MC$ induced by the population of realized objects.
+
+  \item \textbf{Open region} $O$:
+    \[
+      O \;=\; \MC \setminus \overline{B}
+    \]
+    Positions that are physically feasible but historically unrealized.
+
+  \item \textbf{Forbidden region} $F$:
+    \[
+      F \;=\; \Rn \setminus \MC
+    \]
+    Positions that violate at least one constraint $g_j$.
+\end{enumerate}
+Thus $\Rn = B \cup O \cup F$ (up to boundary effects), and
+$\MC = B \cup O$.
+\end{definition}
+
+\begin{proposition}[Explanation requirement]\label{prop:1.4}
+If $\abs{B} > 1$ (the occupied region contains more than one distinct
+position), then the fact that a particular object $a$ occupies position
+$\bm{x}(a)$ and not some other feasible position $\bm{y} \in \MC$
+requires explanation.
+
+\begin{proof}
+Since $\MC$ is a compact subset of $\Rn$ with $n \geq 1$ and $\abs{B} > 1$,
+there exist at least two distinct feasible positions. By the principle of
+sufficient reason (Leibniz): if there were no cause favouring $\bm{x}(a)$
+over $\bm{y}$, the occupation of $\bm{x}(a)$ would be arbitrary.
+But the empirical distribution over $B$ is non-uniform
+(Postulate~\ref{post:2.3}), so the explanation must come from
+\emph{selection pressures} that favour certain positions. \qedhere
+\end{proof}
+\end{proposition}
+
+\TF{1.1, 1.11, 1.12, 1.13, 1.14}
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 2: SELECTION PRESSURES
+%% ══════════════════════════════════════════════════════════════════
+\section{Selection Pressures}\label{sec:pressures}
+
+\begin{definition}[Selection pressure]\label{def:2.1}
+A \emph{selection pressure} on morphospace $\MC$ is a continuous
+function
+\[
+  s_i : \MC \longrightarrow \R
+\]
+that assigns to each position $\bm{x}$ a real value $s_i(\bm{x})$
+expressing how well $\bm{x}$ satisfies the $i$-th criterion.
+Higher values indicate better satisfaction. The gradient
+$\grad s_i(\bm{x})$, where it exists, points in the direction of
+steepest improvement of the $i$-th criterion.
+\end{definition}
+
+\begin{remark}
+A selection pressure is not a rule (``do this'') but a \emph{gradient}
+(``this direction is better''). It is continuous, not discrete;
+directional, not prescriptive. It produces a \emph{tendency}---a
+statistical overrepresentation of certain positions---not a deterministic
+outcome. \TF{2.11, 2.12}
+\end{remark}
+
+\begin{definition}[Selection-pressure vector]\label{def:2.2}
+Given $k$ selection pressures $s_1, \ldots, s_k$ acting on $\MC$,
+the \emph{selection-pressure vector} is the map
+\[
+  \bm{s} : \MC \longrightarrow \R^k, \qquad
+  \bm{s}(\bm{x}) = \bigl(s_1(\bm{x}),\; s_2(\bm{x}),\; \ldots,\;
+  s_k(\bm{x})\bigr).
+\]
+Each component $s_i$ represents an independent criterion. \TF{2.14}
+\end{definition}
+
+\begin{postulate}[Multiple independent pressures]\label{post:2.3}
+For every functional class $C$ with morphospace $\MC$:
+\begin{enumerate}[label=(\alph*),nosep]
+  \item $k \geq 2$: at least two selection pressures act on $\MC$.
+  \item There exist at least two pressures $s_i, s_j$ that are
+    \emph{statistically independent} over $\MC$: knowing $s_i(\bm{x})$
+    does not determine $s_j(\bm{x})$.
+\end{enumerate}
+
+\medskip\noindent
+\textit{Falsification criterion.}
+The postulate fails if there exists a class $C$ in which a single
+selection pressure $s_1$ is sufficient to explain all observed variation
+in $B$---i.e., $B$ is one-dimensional in the image of $\bm{s}$ and no
+second independent pressure can be identified. \TF{2.2}
+\end{postulate}
+
+\begin{theorem}[Variation under constant function]\label{thm:2.4}
+Let $C$ be a functional class with $k \geq 2$ selection pressures.
+Let $s^f$ denote the functional pressure (how well the object serves its
+purpose). Since all objects in $C$ share the same function,
+$s^f(\bm{x})$ is constant for all $\bm{x} \in \MC$ that satisfy the
+functional requirement. Then:
+\begin{enumerate}[label=(\roman*),nosep]
+  \item $s^f$ cannot explain any variation in form within $C$.
+  \item All observed form variation is attributable to the remaining
+    pressures $s^k$ ($k \neq f$).
+\end{enumerate}
+
+\begin{proof}
+\textit{(i)}\; By definition of a functional class, every $\bm{x} \in B$
+satisfies the functional criterion. Thus $s^f$ is constant on $B$:
+$s^f(\bm{x}) = c$ for all $\bm{x} \in B$. A constant function has
+zero gradient: $\grad s^f = \bm{0}$ everywhere on $B$. Therefore $s^f$
+induces no directional preference and cannot explain why any position is
+occupied rather than another.
+
+\textit{(ii)}\; By Postulate~\ref{post:2.3}, $k \geq 2$ and at least one
+pressure $s^j$ ($j \neq f$) is independent of $s^f$. Since $s^f$ is
+constant, the observed variation in $B$ (which is non-trivial since
+$\abs{B} > 1$) must be explained by the gradients of the remaining
+pressures $s^j$, $j \neq f$. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{2.21}
+
+\begin{definition}[Functional delimitation]\label{def:2.5}
+Let $F_C : \Rn \to \{0, 1\}$ be the indicator function of the
+functional requirement:
+\[
+  F_C(\bm{x}) =
+  \begin{cases}
+    1 & \text{if } \bm{x} \text{ satisfies the functional requirement
+        of class } C, \\
+    0 & \text{otherwise.}
+  \end{cases}
+\]
+Then $\MC = \{\bm{x} \in \Rn : F_C(\bm{x}) = 1 \text{ and }
+g_j(\bm{x}) \leq 0 \; \forall j\}$.
+The function defines the class and thereby the morphospace.
+Within $\MC$, $F_C \equiv 1$, so the function is \emph{silent}:
+it delimits but does not differentiate. \TF{2.4}
+\end{definition}
+
+\begin{postulate}[Conflicting gradients]\label{post:2.6}
+For at least one pair $(s_i, s_j)$ of selection pressures, there exists
+a region $R \subseteq \MC$ with $\abs{R} > 0$ (positive measure) such
+that
+\[
+  \inner{\grad s_i(\bm{x})}{\grad s_j(\bm{x})} < 0
+  \qquad \forall\, \bm{x} \in R.
+\]
+That is: improving one property worsens another.
+
+\medskip\noindent
+\textit{Falsification criterion.}
+The postulate fails if all gradient pairs are positively correlated
+everywhere in $\MC$---i.e., all pressures can be simultaneously improved
+at every point. \TF{2.3}
+\end{postulate}
+
+\begin{theorem}[Compromise]\label{thm:2.7}
+Under Postulates~\ref{post:2.3} and \ref{post:2.6}, there exists no
+position $\bm{x}^* \in \MC$ at which all selection pressures are
+simultaneously maximized. Every realized position $\bm{x} \in B$
+is a \emph{compromise}.
+
+\begin{proof}
+Suppose for contradiction that $\bm{x}^*$ is a simultaneous maximum:
+$\grad s_i(\bm{x}^*) = \bm{0}$ for all $i = 1, \ldots, k$ and each
+$s_i$ has a local maximum at $\bm{x}^*$.
+
+By Postulate~\ref{post:2.6}, there exists a region $R$ with positive
+measure where $\inner{\grad s_i}{\grad s_j} < 0$ for some pair $(i, j)$.
+At $\bm{x}^*$, if all gradients vanish, then the inner product is zero,
+not negative. So $\bm{x}^*$ cannot lie in the interior of $R$.
+
+More strongly: in the region $R$, any direction $\bm{v}$ that increases
+$s_i$ (i.e., $\inner{\grad s_i}{\bm{v}} > 0$) necessarily decreases
+$s_j$ (since $\grad s_j$ has a negative component along $\grad s_i$).
+Therefore no critical point in $R$ can be a maximum for both $s_i$ and
+$s_j$ simultaneously.
+
+Since the feasible set $\MC$ is compact and each $s_i$ is continuous,
+each $s_i$ attains its individual maximum on $\MC$ (Weierstrass). But
+these maxima occur at different points:
+$\bm{x}_i^* = \argmax_{\bm{x} \in \MC} s_i(\bm{x})$ with
+$\bm{x}_i^* \neq \bm{x}_j^*$ in general, since the gradients conflict.
+No single point maximizes all simultaneously. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{2.31}
+
+\begin{theorem}[Multiple valid compromises]\label{thm:2.8}
+Under the conditions of Theorem~\ref{thm:2.7}, and given that
+$\abs{B} > 1$ (Proposition~\ref{prop:1.4}), there exist multiple
+distinct compromises: different weightings of the pressures produce
+different optima.
+
+\begin{proof}
+Let $\Phi_{\bm{w}} : \R^k \to \R$ be a monotonically increasing
+aggregation function parameterized by weight vector
+$\bm{w} = (w_1, \ldots, w_k) \in \Delta^{k-1}$ (the $(k{-}1)$-simplex).
+Define the $\bm{w}$-weighted fitness:
+\[
+  f_{\bm{w}}(\bm{x}) = \sum_{i=1}^{k} w_i \, s_i(\bm{x}).
+\]
+Since $\MC$ is compact and $f_{\bm{w}}$ is continuous,
+$f_{\bm{w}}$ attains its maximum at some
+$\bm{x}^*(\bm{w}) \in \MC$.
+
+For distinct weight vectors $\bm{w} \neq \bm{w}'$, the maxima
+generically differ: $\bm{x}^*(\bm{w}) \neq \bm{x}^*(\bm{w}')$.
+To see this, note that at $\bm{x}^*(\bm{w})$, the first-order
+condition requires
+\[
+  \sum_{i=1}^k w_i \, \grad s_i(\bm{x}^*) = \bm{0}.
+\]
+Under Postulate~\ref{post:2.6}, the gradients $\grad s_i$ are not
+positively proportional, so different $\bm{w}$ generically yield
+different critical points. Therefore the set of compromises
+$\{\bm{x}^*(\bm{w}) : \bm{w} \in \Delta^{k-1}\}$ contains more than
+one element, and this set traces out the \emph{Pareto front}
+$\Pareto \subseteq \MC$.
+
+The difference between two compromises under the same function is not a
+defect but reflects different balancings of the same forces. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{2.32}
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 3: FITNESS LANDSCAPE
+%% ══════════════════════════════════════════════════════════════════
+\section{Fitness Landscape}\label{sec:landscape}
+
+\begin{definition}[Fitness function]\label{def:3.1}
+The \emph{fitness function} (or \emph{adaptation function}) is a
+continuous map
+\[
+  f : \MC \longrightarrow \R, \qquad
+  f(\bm{x}) = \Phi\bigl(s_1(\bm{x}),\; s_2(\bm{x}),\; \ldots,\;
+  s_k(\bm{x})\bigr)
+\]
+where $\Phi : \R^k \to \R$ is a smooth aggregation function,
+monotonically non-decreasing in each argument. The choice of $\Phi$
+is not unique; different aggregations encode different relative weightings
+of the pressures. \TF{3.1}
+\end{definition}
+
+\begin{remark}
+In the simplest model $\Phi$ is linear:
+$f(\bm{x}) = \sum_i w_i \, s_i(\bm{x})$ with $w_i \geq 0$,
+$\sum w_i = 1$. But $\Phi$ may be nonlinear if pressures interact
+epistatically---e.g., if the effectiveness of ergonomic optimization
+depends on the material chosen. \TF{3.11}
+\end{remark}
+
+\begin{definition}[Fitness landscape]\label{def:3.2}
+The \emph{fitness landscape} is the graph of $f$ over $\MC$:
+\[
+  \FitLand \;=\; \bigl\{\, (\bm{x},\, f(\bm{x}))
+    \;\big|\; \bm{x} \in \MC \,\bigr\}
+  \;\subseteq\; \R^{n+1}.
+\]
+Local maxima of $f$ are \emph{peaks} (hills). Local minima are
+\emph{valleys}. Saddle points are \emph{ridges} separating peaks. \TF{3.2}
+\end{definition}
+
+\begin{theorem}[Multiple peaks]\label{thm:3.3}
+Under Postulates~\ref{post:2.3} and \ref{post:2.6}, the fitness function
+$f$ generically has at least two local maxima on $\MC$.
+
+\begin{proof}
+We establish this via two independent arguments.
+
+\medskip\noindent\textit{Argument 1 (Morse-theoretic).}\;
+Assume $f$ is a Morse function on $\MC$ (all critical points are
+non-degenerate; this holds generically by the Morse--Sard theorem).
+Let $m_\lambda$ denote the number of critical points of index $\lambda$
+(eigenvalues of the Hessian with negative sign). By the Morse
+inequalities on a compact manifold with boundary:
+\[
+  m_0 - m_1 + m_2 - \cdots \;=\; \chi(\MC)
+\]
+where $\chi(\MC)$ is the Euler characteristic. For a compact convex
+body in $\Rn$, $\chi = 1$, so $m_0 \geq 1$ (at least one local
+minimum) and $m_n \geq 1$ (at least one local maximum).
+
+By Postulate~\ref{post:2.6}, the Hessian of $f$ at any critical point
+reflects conflicting curvatures from different pressures. In the region
+$R$ where $\inner{\grad s_i}{\grad s_j} < 0$, the aggregated landscape
+develops saddle points separating basins. By Morse theory, the existence
+of a saddle point (index 1) between two regions implies
+$m_n \geq m_1 + 1 \geq 2$ local maxima.
+
+\medskip\noindent\textit{Argument 2 (Direct construction).}\;
+Let $s_i, s_j$ have conflicting gradients in $R$ (Postulate~\ref{post:2.6}).
+Consider the one-parameter family of fitness functions
+$f_t(\bm{x}) = t \, s_i(\bm{x}) + (1-t) \, s_j(\bm{x})$ for
+$t \in [0,1]$. At $t = 1$, $f_1 = s_i$ has its maximum at
+$\bm{x}_i^* = \argmax s_i$. At $t = 0$, $f_0 = s_j$ has its maximum
+at $\bm{x}_j^*$. Since the gradients conflict, $\bm{x}_i^* \neq \bm{x}_j^*$.
+
+For intermediate $t \in (0,1)$, the maximum of $f_t$ traces a path in
+$\MC$. By the mountain-pass theorem (a consequence of minimax methods
+in critical point theory), there exists at least one saddle point on
+$\MC$ separating the basins of attraction of $\bm{x}_i^*$ and
+$\bm{x}_j^*$. For the aggregated fitness $f = \Phi(\bm{s})$, each
+basin contains a local maximum, hence $f$ has at least two. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{3.3}
+
+\begin{definition}[Style]\label{def:3.4}
+A \emph{style} is a connected component of the occupied region $B$
+concentrated around a local maximum $\bm{x}^*$ of $f$:
+\[
+  S(\bm{x}^*, \varepsilon, \delta) \;=\;
+  \bigl\{\, \bm{x} \in B \;\big|\;
+    \norm{\bm{x} - \bm{x}^*} < \varepsilon
+    \;\text{and}\;
+    f(\bm{x}) > f(\bm{x}^*) - \delta
+  \,\bigr\}
+\]
+for suitable $\varepsilon > 0$, $\delta > 0$. A style is an attraction
+basin in the fitness landscape, restricted to realized objects.
+Styles are statistical phenomena, not categorical ones: boundaries are
+diffuse, and membership is graded. \TF{3.4, 1.2, 1.21}
+\end{definition}
+
+\begin{theorem}[Analyst-dependence of style decomposition]\label{thm:3.5}
+The decomposition of $B$ into styles depends on the choice of
+aggregation function $\Phi$ and weights $\bm{w}$. Different analysts
+choosing different $\Phi$ may identify different numbers and boundaries
+of styles.
+
+\begin{proof}
+By Theorem~\ref{thm:2.8}, different weight vectors $\bm{w}$ produce
+different fitness functions $f_{\bm{w}}$ with different local maxima.
+Since styles are defined relative to local maxima of $f$
+(Definition~\ref{def:3.4}), and $f$ depends on $\Phi$ and $\bm{w}$,
+the style decomposition is a function of the analyst's choice.
+What is \emph{not} analyst-dependent is the morphospace $\MC$ itself,
+the selection pressures $s_i$, and the empirical distribution over $B$.
+The landscape is a construction; the pressures are real. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{3.41}
+
+\begin{definition}[Path (wandering)]\label{def:3.6}
+A \emph{formgiving history} (design trajectory) is a continuous path
+in morphospace:
+\[
+  \gamma : [0, T] \longrightarrow \MC
+\]
+with $\gamma(0) = \bm{x}^0$ (initial form) and $\gamma(T) = \bm{x}^T$
+(final form), such that each step is local:
+$\norm{\gamma(t + dt) - \gamma(t)} < \varepsilon$ for all $t$.
+The path is \emph{history-dependent}: the accessible region at time $t$
+depends on $\gamma\bigl([0, t]\bigr)$. \TF{3.6}
+\end{definition}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 4: DYNAMICS
+%% ══════════════════════════════════════════════════════════════════
+\section{Dynamics}\label{sec:dynamics}
+
+\begin{postulate}[Dynamic landscape]\label{post:4.1}
+Selection pressures are time-dependent:
+\[
+  s_i(\bm{x},\, t) : \MC \times \R \longrightarrow \R
+\]
+and therefore the fitness landscape $\FitLand(t)$ is a time-varying
+functional:
+\[
+  f(\bm{x},\, t) = \Phi\bigl(s_1(\bm{x}, t),\; \ldots,\;
+  s_k(\bm{x}, t)\bigr).
+\]
+
+\medskip\noindent
+\textit{Falsification criterion.}
+The postulate fails if the fitness landscape for a class $C$ can be
+shown to be topologically unchanged over a period in which the observed
+distribution of forms changes in a way not attributable to stochastic
+drift. \TF{4.1}
+\end{postulate}
+
+\begin{theorem}[Punctuated equilibrium]\label{thm:4.2}
+Let $\bm{x}(t)$ be a form occupying a local maximum of $f(\cdot, t)$
+at time $t$. Then:
+\begin{enumerate}[label=(\roman*),nosep]
+  \item \textbf{Stability:} While $\partial f / \partial t$ is small
+    relative to the curvature $\norm{\nabla^2 f}$ at the peak,
+    $\bm{x}(t)$ varies continuously and slowly (the style evolves
+    gradually).
+  \item \textbf{Catastrophe:} When $\partial^2 f / \partial x^2$ changes
+    sign at the peak (the maximum becomes a saddle point), $\bm{x}(t)$
+    undergoes a discontinuous jump to a new local maximum (style shift).
+\end{enumerate}
+
+\begin{proof}
+\textit{(i)}\; By the implicit function theorem, if $\bm{x}^*(t)$ is a
+non-degenerate local maximum of $f(\cdot, t)$---meaning the Hessian
+$H = \nabla^2 f(\bm{x}^*, t)$ is negative definite---then the map
+$t \mapsto \bm{x}^*(t)$ is smooth. The velocity of the peak is
+\[
+  \frac{d\bm{x}^*}{dt} = -H^{-1} \frac{\partial \grad f}{\partial t}
+  \bigg|_{\bm{x}^*}.
+\]
+While $\partial f / \partial t$ is small and $H$ remains negative
+definite (large curvature), $d\bm{x}^*/dt$ is small: the peak drifts
+slowly. Forms near this peak exhibit gradual stylistic evolution.
+
+\textit{(ii)}\; When a parameter $t$ reaches a critical value $t_c$ at
+which $\det(H) = 0$, the local maximum degenerates. In the generic case
+(fold catastrophe in the sense of Thom), two critical points---a maximum
+and a saddle---coalesce and annihilate. Beyond $t_c$, the original basin
+of attraction disappears, and trajectories that were stable near
+$\bm{x}^*(t)$ are redirected to a distant local maximum.
+
+This is the mathematical structure underlying punctuated equilibrium
+(\textit{cf.} Gould; Bowler): long periods of gradual drift punctuated
+by rapid transitions when the landscape topology changes. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{4.11, 4.12, 4.13}
+
+\begin{definition}[Landscape memory]\label{def:4.3}
+Every realized form $\bm{y} \in B$ modifies the future selection
+pressures via an \emph{impact function} $\eta_i$:
+\[
+  s_i(\bm{x},\, t + dt) \;=\;
+  s_i(\bm{x},\, t) + \eta_i(\bm{y},\, \bm{x})
+\]
+where $\bm{y} = \gamma(t)$ is the currently realized form and
+$\eta_i : \MC \times \MC \to \R$ is continuous with
+$\eta_i(\bm{y}, \bm{y}) \geq 0$ (a realized form at least weakly
+reinforces its own position).
+
+The landscape \emph{remembers} past forms: current selection pressures
+are functions of the entire realized trajectory $\gamma([0, t])$,
+not just the current state. This creates co-evolutionary feedback
+between form and environment. \TF{4.2, 4.21, 4.22}
+\end{definition}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 5: EMPIRICAL -- MATERIAL SIGNATURES
+%% ══════════════════════════════════════════════════════════════════
+\section{Empirical: Material Signatures}\label{sec:empirical}
+
+\begin{postulate}[Geometric material signature]\label{post:5.1}
+For every material $m$ used in functional class $C$, the conditional
+distribution of geometric properties given material is non-uniform:
+\[
+  P(\bm{x} \mid m) \;\neq\; \mathrm{Uniform}(\MC)
+  \qquad \forall\; m.
+\]
+That is, each material induces a characteristic geometric \emph{profile}
+---a region of morphospace that it favours.
+
+\medskip\noindent
+\textit{Falsification criterion.}
+The postulate fails if the same geometric distribution is observed
+regardless of material, within the same functional class and the same
+set of other selection pressures. \TF{8.1}
+\end{postulate}
+
+\begin{theorem}[Information theorem]\label{thm:5.2}
+Within a functional class $C$ with at least two material categories,
+material carries strictly more mutual information with realized geometry
+than function does:
+\[
+  \MI(G;\, M) \;>\; \MI(G;\, \mathrm{Func}) \;=\; 0.
+\]
+
+\begin{proof}
+\textit{Part 1: $\MI(G;\, \mathrm{Func}) = 0$.}\;
+By definition of a functional class, all objects in $C$ share the same
+function. Therefore $\mathrm{Func}$ is a constant random variable within
+$C$: $\Ent(\mathrm{Func} \mid C) = 0$. By the data-processing
+inequality and the property that mutual information with a constant is
+zero:
+\[
+  \MI(G;\, \mathrm{Func}) = \Ent(G) - \Ent(G \mid \mathrm{Func})
+  = \Ent(G) - \Ent(G) = 0.
+\]
+
+\textit{Part 2: $\MI(G;\, M) > 0$.}\;
+By Postulate~\ref{post:5.1}, $P(\bm{x} \mid m) \neq P(\bm{x})$ for
+at least one material $m$ (the material-conditional distribution differs
+from the marginal). This is equivalent to $G$ and $M$ not being
+independent. By the fundamental property of mutual information:
+\[
+  \MI(G;\, M) = 0 \;\iff\; G \perp\!\!\!\perp M.
+\]
+Since $G \not\perp\!\!\!\perp M$ (by Postulate~\ref{post:5.1}), we
+have $\MI(G;\, M) > 0$.
+
+\textit{Combining:}\; $\MI(G;\, M) > 0 = \MI(G;\, \mathrm{Func})$.
+\qedhere
+\end{proof}
+\end{theorem}
+
+\TF{8.11, 8.12, 8.13, 8.14}
+
+\begin{remark}[Empirical values from STOLAR dataset]
+In the dataset of $n = 93$ chairs from a Norwegian national museum
+(materials: mahogany, steel, laminate, beech; period 1280--2024):
+\begin{align*}
+  \MI(G;\, M) &= 0.382 \;\text{bits}, \\
+  \MI(G;\, \mathrm{Time}) &= 0.168 \;\text{bits}, \\
+  \MI(G;\, \mathrm{Geography}) &= 0.079 \;\text{bits}, \\
+  \MI(G;\, \mathrm{Func}) &= 0 \;\text{bits (by definition).}
+\end{align*}
+Material is the strongest predictor. This is the most concentrated
+empirical argument against the deterministic axiom ``form follows
+function.'' \TF{2.61, 2.62, 8.11--8.18}
+\end{remark}
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 6: NAVIGATOR
+%% ══════════════════════════════════════════════════════════════════
+\section{Navigator}\label{sec:navigator}
+
+\begin{definition}[Navigator]\label{def:6.1}
+A \emph{navigator} is a triple
+$\Nav = (G,\; \mu,\; \alpha)$
+where:
+\begin{enumerate}[label=(\alph*),nosep]
+  \item $G \subseteq \MC$ is a \emph{goal set} (target region): a
+    non-empty subset of morphospace that the navigator steers toward.
+  \item $\mu : \MC \to \R_{\geq 0}$ is a \emph{distance function}:
+    $\mu(\bm{x}) = d(\bm{x},\, G)$ for a metric $d$ on $\MC$, with
+    $\mu(\bm{x}) = 0 \iff \bm{x} \in G$.
+  \item $\alpha : \MC \to T\MC$ is a \emph{steering field}: a vector
+    field on $\MC$ satisfying
+    \[
+      \inner{\alpha(\bm{x})}{\!-\grad\mu(\bm{x})} > 0
+      \qquad \text{whenever } \mu(\bm{x}) > 0.
+    \]
+    That is, $\alpha$ always has a component pointing toward decreasing
+    distance to $G$.
+\end{enumerate}
+
+\medskip\noindent
+Three conditions are required: (a)~the system has a goal state,
+(b)~it can register distance from the goal, and (c)~it can adjust
+toward the goal. No consciousness, intention, or nervous system is
+required. A thermostat, a gradient-descent algorithm, and a chemical
+reaction driven toward equilibrium are all navigators. \TF{5.1, 5.11}
+\end{definition}
+
+\begin{definition}[Cognitive light cone]\label{def:6.2}
+The \emph{cognitive light cone} (boundary) of a navigator $\Nav$ at
+time $t$ is the maximal region of morphospace--time in which $\Nav$ can
+represent states and steer:
+\[
+  \partial\Nav \;=\;
+  \bigl\{\, (r,\, \tau) \in \MC \times \R
+    \;\big|\;
+    \Nav \text{ can represent and work toward states in } (r, \tau)
+  \,\bigr\}.
+\]
+The spatial extent determines what problems $\Nav$ can address; the
+temporal extent determines its planning horizon. \TF{5.2, 5.21}
+\end{definition}
+
+\begin{definition}[Intelligence]\label{def:6.3}
+The \emph{intelligence} of a navigator $\Nav$ is its capacity to avoid
+local optima in the fitness landscape:
+\[
+  I(\Nav) \;\propto\;
+  \max\bigl\{\, d\bigl(\gamma_\Nav(t),\; \bm{x}_{\mathrm{local}}\bigr)
+    \;\big|\;
+    \gamma_\Nav \text{ converges to } \bm{x}_{\mathrm{global}}
+  \,\bigr\}
+\]
+where $\bm{x}_{\mathrm{local}}$ is a local optimum and
+$\bm{x}_{\mathrm{global}}$ is a better alternative.
+Intelligence is the ability to follow detours---to accept temporarily
+lower fitness in order to reach a higher peak. It is scale-invariant:
+the definition applies equally to an enzyme avoiding a conformational
+trap and to a civilization investing in infrastructure. \TF{5.3, 5.31}
+\end{definition}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 7: SUBSTRATE INDEPENDENCE
+%% ══════════════════════════════════════════════════════════════════
+\section{Substrate Independence}\label{sec:substrate}
+
+\begin{postulate}[Substrate-independent navigation]\label{post:7.1}
+The conditions (a), (b), (c) in Definition~\ref{def:6.1} can be
+satisfied by any physical system---biological, algorithmic, mechanical,
+or distributed---that:
+\begin{enumerate}[label=(\roman*),nosep]
+  \item has states (positions in some configuration space),
+  \item can register distance from a target configuration, and
+  \item can adjust its state in response.
+\end{enumerate}
+Navigation is a property of the system's \emph{functional organization},
+not of the material it is made from.
+
+\medskip\noindent
+\textit{Falsification criterion.}
+The postulate fails if it can be shown that at least one of conditions
+(a)--(c) necessarily requires a specific physical substrate (e.g.,
+organic matter)---that is, if there exist formgiving processes where a
+human navigator consistently produces forms that no algorithmic navigator
+can produce, \emph{not} because of computational limits or sensory
+resolution, but because navigation itself requires organic substrate.
+\TF{5.12}
+\end{postulate}
+
+\begin{theorem}[Substrate independence of morphospace position]%
+\label{thm:7.2}
+The position $\bm{x} \in \MC$ occupied by a realized object is
+determined by its measurable properties, not by the process that
+produced it. Two objects with identical attribute vectors occupy the
+same point in $\MC$ regardless of whether they were made by hand, by
+machine, by algorithm, or by biological growth.
+
+\begin{proof}
+By Definition~\ref{def:1.1}, the attribute vector $\bm{x}(a)$ depends
+only on the measurable geometric properties $x_1(a), \ldots, x_n(a)$.
+These are intrinsic to the object $a$, not to its production history.
+If two objects $a$ (handmade) and $b$ (machine-made) have
+$x_i(a) = x_i(b)$ for all $i$, then $\bm{x}(a) = \bm{x}(b)$,
+hence they occupy the same point.
+
+This does \emph{not} mean the production process is irrelevant: it
+determines which region of $\MC$ is accessible (the substrate constrains
+the trajectory, \S\ref{sec:variational}). But the position itself is
+substrate-invariant. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{1.4, 1.41, 5.12}
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 8: EMERGENCE
+%% ══════════════════════════════════════════════════════════════════
+\section{Emergence}\label{sec:emergence}
+
+\begin{theorem}[Emergent navigation]\label{thm:8.1}
+Let $\Nav^1, \Nav^2, \ldots, \Nav^S$ be a collection of sub-navigators,
+each with its own triple $(G_j, \mu_j, \alpha_j)$. The collective system
+$\Nav = \{\Nav^1, \ldots, \Nav^S\}$ can realize a navigator triple
+$(G, \mu, \alpha)$ where $G$, $\mu$, and $\alpha$ are \emph{not}
+functions of any single sub-navigator's triple, but emerge from the
+interaction dynamics.
+
+\begin{proof}
+Define the collective state as $\bm{X} = (\bm{x}^1, \ldots, \bm{x}^S)
+\in {(\MC)}^S$. Each sub-navigator $\Nav^j$ generates a flow
+$\dot{\bm{x}}^j = \alpha_j(\bm{x}^j)$ in its own morphospace.
+When sub-navigators interact---e.g., through shared selection pressures,
+communication, or physical coupling---the collective dynamics become:
+\[
+  \dot{\bm{x}}^j = \alpha_j(\bm{x}^j)
+  + \sum_{l \neq j} \phi_{jl}(\bm{x}^j, \bm{x}^l)
+\]
+where $\phi_{jl}$ encodes the interaction between sub-navigators $j$
+and $l$.
+
+The collective system exhibits a macroscopic goal $G$, distance $\mu$,
+and steering $\alpha$ if there exists a coarse-graining map
+$\Pi : {(\MC)}^S \to \MC$ such that the projected dynamics
+$\dot{\bm{y}} = \Pi_* \dot{\bm{X}}$ satisfy Definition~\ref{def:6.1}
+with $(G, \mu, \alpha)$ that cannot be decomposed as functions of any
+single $(G_j, \mu_j, \alpha_j)$.
+
+\textit{Existence.}\;
+Xenobots---synthetic organisms assembled from frog embryonic cells
+without evolutionary history---navigate toward coherent morphological
+configurations. The navigation competency is not encoded in any single
+cell's genome but emerges from intercellular bioelectric signaling
+dynamics (Murugan et al., 2022; Blackiston et al., 2015). This
+demonstrates that the collective triple $(G, \mu, \alpha)$ is a real
+emergent property, not reducible to individual cell navigation.
+
+In the design context: the final form of a collaboratively designed
+object was not specified by any single participant but emerged from the
+negotiation between them. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{5.6, 5.61, 5.62}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 9: VARIATIONAL PRINCIPLES
+%% ══════════════════════════════════════════════════════════════════
+\section{Variational Principles}\label{sec:variational}
+
+\begin{postulate}[Path-dependent fitness]\label{post:9.1}
+The fitness value of a realized form depends not only on its position
+$\bm{x} \in \MC$ but on the entire path $\gamma : [0, T] \to \MC$
+taken to reach it. Define the \emph{path fitness functional}:
+\[
+  S[\gamma] \;=\; \int_0^T
+    g\!\left(\gamma(t),\; \dot{\gamma}(t),\; t\right) dt
+\]
+where $g : \MC \times T\MC \times \R \to \R$ is a Lagrangian that
+depends on the position $\gamma(t)$, velocity $\dot{\gamma}(t)$
+(rate of change), and time $t$.
+
+\medskip\noindent
+\textit{Interpretation.}\;
+Two identical chairs occupying the same point in morphospace but with
+different production histories (e.g., original vs.\ copy) have
+different cultural value, different market position, and different
+potential to influence future designs. Position alone is insufficient;
+the path matters.
+
+\medskip\noindent
+\textit{Falsification criterion.}\;
+The postulate fails if identical forms with different production
+histories consistently have the same survival and reproduction rates
+in the design ecology. \TF{7.1}
+\end{postulate}
+
+\begin{theorem}[Stationary path]\label{thm:9.2}
+If realized design trajectories are stationary points of $S[\gamma]$
+(the conjecture $\delta S[\gamma] = 0$), then they satisfy the
+Euler--Lagrange equation:
+\[
+  \frac{\partial g}{\partial \gamma}
+  - \frac{d}{dt}\frac{\partial g}{\partial \dot{\gamma}} = 0.
+\]
+
+\begin{proof}
+This is a direct application of the calculus of variations. Let
+$\gamma_\varepsilon(t) = \gamma(t) + \varepsilon \, \eta(t)$ be a
+variation with $\eta(0) = \eta(T) = 0$. The stationarity condition is:
+\[
+  \frac{d}{d\varepsilon}\bigg|_{\varepsilon=0} S[\gamma_\varepsilon]
+  = 0.
+\]
+Computing:
+\begin{align*}
+  \frac{d}{d\varepsilon}\bigg|_{0} S[\gamma_\varepsilon]
+  &= \int_0^T \left(
+    \frac{\partial g}{\partial \gamma} \cdot \eta
+    + \frac{\partial g}{\partial \dot{\gamma}} \cdot \dot{\eta}
+  \right) dt \\
+  &= \int_0^T \left(
+    \frac{\partial g}{\partial \gamma}
+    - \frac{d}{dt}\frac{\partial g}{\partial \dot{\gamma}}
+  \right) \cdot \eta \; dt
+  + \left[\frac{\partial g}{\partial \dot{\gamma}} \cdot \eta
+  \right]_0^T.
+\end{align*}
+The boundary term vanishes since $\eta(0) = \eta(T) = 0$. Since $\eta$
+is arbitrary, the fundamental lemma of the calculus of variations
+gives the Euler--Lagrange equation. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{7.11}
+
+\begin{theorem}[Path modifies landscape]\label{thm:9.3}
+The path-dependent fitness and landscape memory (Definition~\ref{def:4.3})
+imply that giving form is not finding the best position but finding the
+best \emph{path}: the process modifies what outcomes are possible.
+
+\begin{proof}
+By Definition~\ref{def:4.3}, $s_i(\bm{x}, t+dt)$ depends on the
+realized form $\bm{y} = \gamma(t)$ via the impact function $\eta_i$.
+The fitness landscape at time $T$ is therefore a functional of the
+entire trajectory:
+\[
+  f(\bm{x}, T) = \Phi\!\left(
+    s_1\!\left(\bm{x},\, 0\right) +
+    \int_0^T \eta_1(\gamma(\tau), \bm{x})\, d\tau,\;
+    \ldots
+  \right).
+\]
+The final landscape---and therefore the set of available optima---depends
+on the path taken. Two different trajectories $\gamma$ and $\gamma'$
+arriving at the same final point $\bm{x}^T$ may face different future
+landscapes, different available optima, and different survival
+prospects. The process is not merely a means to the result; the process
+\emph{modifies} what results are possible. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{7.12}
+
+\begin{theorem}[Spreading relation]\label{thm:9.4}
+Let $\sigma^2[\gamma]$ denote the variance of the form distribution
+around a given attractor in $\MC$, and let $\norm{\bm{s}}$ denote the
+aggregate strength of selection pressures at that attractor. Then:
+\[
+  \sigma^2 \;\propto\; \frac{1}{\norm{\bm{s}}}.
+\]
+Stronger selection produces narrower distributions (tighter styles);
+weaker selection produces broader distributions (more variation).
+
+\begin{proof}
+Model the stationary distribution of forms near a local maximum
+$\bm{x}^*$ as a Boltzmann-like distribution:
+\[
+  P(\bm{x}) \;\propto\; \exp\!\bigl(\beta \, f(\bm{x})\bigr)
+\]
+where $\beta > 0$ controls the selection intensity (analogous to
+inverse temperature). Near the maximum, expand $f$ to second order:
+\[
+  f(\bm{x}) \approx f(\bm{x}^*) - \tfrac{1}{2}
+  (\bm{x} - \bm{x}^*)^\top H (\bm{x} - \bm{x}^*)
+\]
+where $H = -\nabla^2 f(\bm{x}^*)$ is positive definite (since
+$\bm{x}^*$ is a maximum). Then:
+\[
+  P(\bm{x}) \propto \exp\!\left(
+    -\tfrac{\beta}{2}
+    (\bm{x} - \bm{x}^*)^\top H (\bm{x} - \bm{x}^*)
+  \right).
+\]
+This is a multivariate Gaussian with covariance
+$\Sigma = (\beta H)^{-1}$. The variance along any axis is
+$\sigma_i^2 = (\beta \, \lambda_i)^{-1}$ where $\lambda_i$ are the
+eigenvalues of $H$. Since $H$ reflects the curvature of the aggregated
+selection pressures, $\lambda_i \propto \norm{\bm{s}}$, giving
+$\sigma^2 \propto 1/\norm{\bm{s}}$. \qedhere
+\end{proof}
+\end{theorem}
+
+\TF{7.2, 7.21}
+
+\begin{definition}[Substrate-dependent distribution]\label{def:9.5}
+The probability of form $\bm{x}$ given substrate (material, tool,
+process) is:
+\[
+  P(\bm{x} \mid \text{substrate}) \;\neq\;
+  P(\bm{x} \mid \text{substrate}')
+\]
+for distinct substrates. Each substrate---each tradition, each tool,
+each material---generates a different distribution over $\MC$. A
+substrate shift changes not just \emph{how} forms are made but
+\emph{which} forms are discovered. \TF{7.3}
+\end{definition}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% CHAPTER 10: CONSEQUENCES
+%% ══════════════════════════════════════════════════════════════════
+\section{Consequences}\label{sec:consequences}
+
+\begin{theorem}[Provisional compromise]\label{thm:10.1}
+Every realized form is a \emph{provisional} compromise: optimal for the
+selection pressures at the time of its creation, but generically
+suboptimal for any later configuration of pressures.
+
+\begin{proof}
+By Theorem~\ref{thm:2.7}, every realized form $\bm{x} \in B$ is a
+compromise: it balances conflicting selection pressures but does not
+maximize all simultaneously. By Postulate~\ref{post:4.1}, the pressures
+$s_i(\bm{x}, t)$ change over time.
+
+Let $\bm{x}^*(\tau)$ be the local maximum of
+$f(\cdot, \tau)$ nearest to $\bm{x}$ at time $\tau$ of creation. At a
+later time $t > \tau$, the pressures have shifted:
+$\bm{s}(\cdot, t) \neq \bm{s}(\cdot, \tau)$. The point
+$\bm{x}^*(\tau)$ is generically \emph{not} a critical point of
+$f(\cdot, t)$, since
+\[
+  \grad f(\bm{x}^*(\tau),\, t) =
+  \grad f(\bm{x}^*(\tau),\, \tau) +
+  \int_\tau^t \frac{\partial}{\partial t'} \grad f(\bm{x}^*(\tau),\, t')\, dt'
+  \neq \bm{0}
+\]
+unless the integral vanishes identically (a non-generic condition).
+Therefore the form that was optimal at $\tau$ is no longer optimal at $t$.
+No form is final; every object is a snapshot of a dynamic system.
+\qedhere
+\end{proof}
+\end{theorem}
+
+\TF{7.4}
+
+\begin{theorem}[Durable traditions]\label{thm:10.2}
+Traditions with more independent adaptive mechanisms (more selection
+pressures addressed by competent sub-navigators) are more robust to
+landscape changes.
+
+\begin{proof}
+Let a tradition $\mathcal{T}$ be a population of navigators addressing
+$k_\mathcal{T}$ distinct selection pressures through independent adaptive
+mechanisms. When the landscape shifts (Postulate~\ref{post:4.1}),
+typically only a subset of pressures change simultaneously.
+
+A tradition with $k_\mathcal{T}$ independent mechanisms can respond to
+a shift in pressure $s_i$ without disrupting its response to pressures
+$s_j$ ($j \neq i$), because the mechanisms are independent. Its
+adaptation requires adjusting only $\Delta k \leq k_\mathcal{T}$
+mechanisms.
+
+Compare traditions $\mathcal{T}_1$ with $k_1$ mechanisms and
+$\mathcal{T}_2$ with $k_2 > k_1$ mechanisms. Under a landscape shift
+affecting one pressure, $\mathcal{T}_2$ adjusts only
+$\Delta k / k_2 < \Delta k / k_1$ of its total adaptive capacity.
+The larger repertoire provides redundancy: a craft tradition that
+combines material understanding, cultural sensitivity, and individual
+innovation adapts better than one relying on a single mechanism.
+\qedhere
+\end{proof}
+\end{theorem}
+
+\TF{7.5}
+
+\begin{theorem}[Falsifiability of the framework]\label{thm:10.3}
+The framework of Tractatus Formae is falsifiable: if a single selection
+pressure $s_1$ is sufficient to explain all observed form variation
+within a functional class $C$, then Postulate~\ref{post:2.3} fails, and
+with it Theorems~\ref{thm:2.4}, \ref{thm:2.7}, \ref{thm:2.8},
+\ref{thm:3.3}, \ref{thm:3.5}, and \ref{thm:10.1}.
+
+\begin{proof}
+The deductive chain is:
+\begin{enumerate}[nosep]
+  \item Postulate~\ref{post:2.3} (multiple independent pressures)
+    $\implies$ Theorem~\ref{thm:2.4} (variation not explained by
+    function).
+  \item Postulates~\ref{post:2.3} + \ref{post:2.6} (conflicting
+    gradients) $\implies$ Theorem~\ref{thm:2.7} (compromise) $\implies$
+    Theorem~\ref{thm:2.8} (multiple compromises).
+  \item Theorems~\ref{thm:2.7} + \ref{thm:2.8} $\implies$
+    Theorem~\ref{thm:3.3} (multiple peaks) $\implies$
+    Definition~\ref{def:3.4} (styles exist).
+  \item Theorem~\ref{thm:3.3} + Definition~\ref{def:3.4} $\implies$
+    Theorem~\ref{thm:3.5} (analyst dependence of style decomposition).
+  \item Postulate~\ref{post:4.1} (dynamic landscape) + Theorem~\ref{thm:2.7}
+    $\implies$ Theorem~\ref{thm:10.1} (provisional compromise).
+\end{enumerate}
+
+If any of the five postulates can be empirically disproven, the
+corresponding branch of the deductive tree collapses. The framework
+is valid precisely because it can fail. The deterministic axiom
+``form follows function'' was unfalsifiable (Michl) and therefore
+not a scientific claim. This framework makes quantitative predictions
+(Theorem~\ref{thm:9.4}, Postulate~\ref{post:5.1}) that can be tested
+against data.
+
+That the text \emph{can} be felled is the reason it is valid.
+\qedhere
+\end{proof}
+\end{theorem}
+
+\TF{7.7}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% APPENDIX: CORRESPONDENCE TABLE
+%% ══════════════════════════════════════════════════════════════════
+\section*{Appendix: Correspondence Table}
+\addcontentsline{toc}{section}{Appendix: Correspondence Table}
+
+The following table maps every formal element in this document to its
+counterpart in \textit{Tractatus Formae}.
+
+\medskip
+\begin{longtable}{@{}lll@{}}
+\toprule
+\textsc{Mathematica} & \textsc{Type} & \textsc{Tractatus Formae} \\
+\midrule
+\endfirsthead
+\toprule
+\textsc{Mathematica} & \textsc{Type} & \textsc{Tractatus Formae} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+Def.~1.1 (Morphospace) & Definition & 1.1 \\
+Def.~1.2 (Constraints) & Definition & 1.1 \\
+Def.~1.3 (Region typology) & Definition & 1.13 \\
+Prop.~1.4 (Explanation requirement) & Proposition & 1.14 \\
+\addlinespace
+Def.~2.1 (Selection pressure) & Definition & 2.1 \\
+Def.~2.2 (Pressure vector) & Definition & 2.14 \\
+Post.~2.3 (Multiple pressures) & Postulate & 2.2 \\
+Thm.~2.4 (Variation under function) & Theorem & 2.21 \\
+Def.~2.5 (Functional delimitation) & Definition & 2.4 \\
+Post.~2.6 (Conflicting gradients) & Postulate & 2.3 \\
+Thm.~2.7 (Compromise) & Theorem & 2.31 \\
+Thm.~2.8 (Multiple compromises) & Theorem & 2.32 \\
+\addlinespace
+Def.~3.1 (Fitness function) & Definition & 3.1 \\
+Def.~3.2 (Fitness landscape) & Definition & 3.2 \\
+Thm.~3.3 (Multiple peaks) & Theorem & 3.3 \\
+Def.~3.4 (Style) & Definition & 3.4 \\
+Thm.~3.5 (Analyst dependence) & Theorem & 3.41 \\
+Def.~3.6 (Path / wandering) & Definition & 3.6 \\
+\addlinespace
+Post.~4.1 (Dynamic landscape) & Postulate & 4.1 \\
+Thm.~4.2 (Punctuated equilibrium) & Theorem & 4.11 \\
+Def.~4.3 (Landscape memory) & Definition & 4.2 \\
+\addlinespace
+Post.~5.1 (Geometric signature) & Postulate & 8.1 \\
+Thm.~5.2 (Information theorem) & Theorem & 8.11 \\
+\addlinespace
+Def.~6.1 (Navigator) & Definition & 5.1 \\
+Def.~6.2 (Cognitive light cone) & Definition & 5.2 \\
+Def.~6.3 (Intelligence) & Definition & 5.3 \\
+\addlinespace
+Post.~7.1 (Substrate independence) & Postulate & 5.12 \\
+Thm.~7.2 (Position invariance) & Theorem & 1.4, 5.12 \\
+\addlinespace
+Thm.~8.1 (Emergent navigation) & Theorem & 5.62 \\
+\addlinespace
+Post.~9.1 (Path-dependent fitness) & Postulate & 7.1 \\
+Thm.~9.2 (Stationary path) & Theorem & 7.11 \\
+Thm.~9.3 (Path modifies landscape) & Theorem & 7.12 \\
+Thm.~9.4 (Spreading relation) & Theorem & 7.2 \\
+Def.~9.5 (Substrate-dependent distribution) & Definition & 7.3 \\
+\addlinespace
+Thm.~10.1 (Provisional compromise) & Theorem & 7.4 \\
+Thm.~10.2 (Durable traditions) & Theorem & 7.5 \\
+Thm.~10.3 (Falsifiability) & Theorem & 7.7 \\
+\end{longtable}
+
+
+\newpage
+%% ══════════════════════════════════════════════════════════════════
+%% APPENDIX: DEPENDENCY GRAPH
+%% ══════════════════════════════════════════════════════════════════
+\section*{Appendix: Logical Dependency Graph}
+\addcontentsline{toc}{section}{Appendix: Logical Dependency Graph}
+
+The deductive structure of the theory, showing which results depend on
+which postulates and earlier theorems:
+
+\medskip
+\begin{small}
+\begin{verbatim}
+                    +-- Def 1.1 (Morphospace)
+                    |     +-- Def 1.2 (Constraints)
+                    |         +-- Def 1.3 (Regions)
+                    |             +-- Prop 1.4 (Explanation)
+                    |
+   POSTULATE 2.3 --+-- Thm 2.4 (Variation /= function)
+   (k >= 2)        |
+                    |          +-- Thm 2.7 (Compromise)
+   POSTULATE 2.6 --+----------+
+   (grad conflict)  |          +-- Thm 2.8 (Multiple compromises)
+                    |                |
+                    |          Thm 3.3 (Multiple peaks)
+                    |           +-- Def 3.4 (Style)
+                    |           +-- Thm 3.5 (Analyst dependence)
+                    |
+   POSTULATE 4.1 --+-- Thm 4.2 (Punctuated equilibrium)
+   (dynamic)        |   +-- Def 4.3 (Landscape memory)
+                    |
+                    +-- Thm 10.1 (Provisional compromise)
+                    |       [from 2.7 + 4.1]
+                    |
+                    +-- Thm 10.2 (Durable traditions)
+                            [from 10.1 + 6.1]
+
+   POSTULATE 5.1 ---- Thm 5.2 (Information theorem)
+   (material sig.)
+
+   POSTULATE 7.1 ---- Thm 7.2 (Position invariance)
+   (substrate-ind.)    +-- Thm 8.1 (Emergent navigation)
+
+   POSTULATE 9.1 --+-- Thm 9.2 (Stationary path / E-L)
+   (path-dep.)      +-- Thm 9.3 (Path modifies landscape)
+                    +-- Thm 9.4 (Spreading relation)
+
+   Thm 10.3 (Falsifiability)
+     [meta-thm: if Post 2.3 fails -> 2.4, 2.7, 2.8, 3.3, 10.1 fall]
+\end{verbatim}
+\end{small}
+
+\medskip\noindent
+\textbf{Summary of formal inventory:}
+\begin{itemize}[nosep]
+  \item 14 definitions (Def.~1.1--9.5)
+  \item 7 postulates (Post.~2.3, 2.6, 4.1, 5.1, 7.1, 9.1 + the
+    explanation principle 1.4)
+  \item 13 theorems (Thm.~2.4--10.3)
+  \item 1 meta-theorem on falsifiability (Thm.~10.3)
+\end{itemize}
+
+\vfill
+\begin{center}
+\rule{4cm}{0.4pt}
+
+\medskip
+{\small\itshape This document is the formal companion to}\\
+{\small\scshape Tractatus Formae}\\
+{\small\itshape Iver Raknes Finne, 2026}
+\end{center}
+
+%% ── Bibliography ─────────────────────────────────────────────────
+\newpage
+\printbibliography[title={References}]
+
+\end{document}

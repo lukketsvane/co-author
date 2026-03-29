@@ -1,0 +1,9 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'formlaere_mathematica.blg'
+[298] biber-MSWIN64:342> INFO - === 
+[411] Biber.pm:421> INFO - Reading 'formlaere_mathematica.bcf'
+[547] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[564] bbl.pm:676> INFO - Writing 'formlaere_mathematica.bbl' with encoding 'UTF-8'
+[564] bbl.pm:779> INFO - Output to formlaere_mathematica.bbl
+[564] Biber.pm:132> WARN - The file 'formlaere_mathematica.bcf' does not contain any citations!
+[564] Biber.pm:134> INFO - WARNINGS: 1

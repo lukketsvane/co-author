@@ -31,7 +31,7 @@ htmlcov/
 Thumbs.db
 
 # Project output (generert per prosjekt)
-projects/*/output/
+# projects/*/output/
 projects/*/log/
 projects/*/sessions/
 

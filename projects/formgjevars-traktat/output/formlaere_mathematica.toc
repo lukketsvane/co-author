@@ -1,0 +1,13 @@
+\contentsline {section}{Preamble}{2}{Doc-Start}%
+\contentsline {section}{\numberline {1}Morphospace}{3}{section.1}%
+\contentsline {section}{\numberline {2}Selection Pressures}{5}{section.2}%
+\contentsline {section}{\numberline {3}Fitness Landscape}{8}{section.3}%
+\contentsline {section}{\numberline {4}Dynamics}{10}{section.4}%
+\contentsline {section}{\numberline {5}Empirical: Material Signatures}{12}{section.5}%
+\contentsline {section}{\numberline {6}Navigator}{14}{section.6}%
+\contentsline {section}{\numberline {7}Substrate Independence}{15}{section.7}%
+\contentsline {section}{\numberline {8}Emergence}{16}{section.8}%
+\contentsline {section}{\numberline {9}Variational Principles}{17}{section.9}%
+\contentsline {section}{\numberline {10}Consequences}{19}{section.10}%
+\contentsline {section}{Appendix: Correspondence Table}{21}{Item.25}%
+\contentsline {section}{Appendix: Logical Dependency Graph}{23}{table.1}%
