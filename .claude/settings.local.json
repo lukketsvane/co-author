@@ -31,7 +31,8 @@
       "Bash(curl -sL -o sigaki-2018-entropy-art.pdf \"https://arxiv.org/pdf/1809.05760\")",
       "Bash(curl -sL -o nicolaescu-morse-theory.pdf \"https://www3.nd.edu/~lnicolaes/Morse2nd.pdf\")",
       "Bash(pdflatex -interaction=nonstopmode utkast_01.tex)",
-      "Bash(PYTHONIOENCODING=utf-8 python -c \":*)"
+      "Bash(PYTHONIOENCODING=utf-8 python -c \":*)",
+      "Bash(pdflatex -interaction=nonstopmode utkast_02.tex)"
     ]
   }
 }
