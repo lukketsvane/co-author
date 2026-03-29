@@ -1,0 +1,30 @@
+name: Formgjevars Traktat
+slug: formgjevars-traktat
+description: >
+  Ein substrat-uavhengig formteori i traktatform (Wittgenstein-modell).
+  7 hovudproposisjonar med nummererte underproposisjonar.
+  Søstertekst: FORMLÆRE MATHEMATICA (formell notasjon).
+
+goals:
+  - Reell logisk progresjon; kvar proposisjon følgjer demonstrerbart frå dei føregåande
+  - Argumentere framfor å proklamere; vis resonnementet, ikkje berre konklusjonen
+  - Definere termar presist før dei vert brukte
+  - Skilje klart mellom premissar, definisjonar, teorem og illustrasjonar
+  - Demonstrere substrat-uavhengigheit, ikkje berre hevde den
+  - Kutte det poetiske der det kamuflerer tomheit, behalde det der det opplyser
+
+staff:
+  - wittgenstein
+  - michael_levin
+  - nynorsk_akademikar
+  - design_og_print
+
+config:
+  default_model: claude-sonnet-4-6
+  web_search: false
+  language: nynorsk
+
+author: Iver Raknes Finne
+institution: Institutt for design, AHO
+
+created: 2026-03-28T00:00:00

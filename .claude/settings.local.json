@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python build_utkast.py)",
+      "WebFetch(domain:janmichl.com)",
+      "WebFetch(domain:www.mdpi.com)",
+      "WebFetch(domain:doi.org)",
+      "WebFetch(domain:pubmed.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:www.frontiersin.org)",
+      "Bash(ls:*)",
+      "Bash(python build_utkast_03.py)",
+      "Read(//workspaces/**)",
+      "Bash(zip -r NBNO.py.zip NBNO.py/)",
+      "Bash(python:*)",
+      "Bash(pip list:*)",
+      "Bash(wc:*)",
+      "Bash(fc-list : family)",
+      "Bash(apt-get list:*)",
+      "Bash(pip show:*)",
+      "Bash(apt-cache search:*)",
+      "Bash(sudo apt-get:*)",
+      "Bash(fc-list)",
+      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py prompt formlaere-mathematica mathematikar session_001)",
+      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py build formlaere-mathematica)",
+      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py build formgjevars-traktat)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:royalsocietypublishing.org)",
+      "WebFetch(domain:www.pnas.org)",
+      "Bash(curl -sL -o kaila-annila-2008-least-action.pdf \"https://arxiv.org/pdf/0807.3457\")",
+      "Bash(curl -sL -o sigaki-2018-entropy-art.pdf \"https://arxiv.org/pdf/1809.05760\")",
+      "Bash(curl -sL -o nicolaescu-morse-theory.pdf \"https://www3.nd.edu/~lnicolaes/Morse2nd.pdf\")",
+      "Bash(pdflatex -interaction=nonstopmode utkast_01.tex)",
+      "Bash(PYTHONIOENCODING=utf-8 python -c \":*)"
+    ]
+  }
+}
