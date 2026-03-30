@@ -5,3 +5,6 @@ hjelp meg laste nned for å så nøye transkribere hele boka si tekst, fullstend
 dvs beskrivelsen av dei ulike som utgjer redaksjonen bør være eigne yaml filler trur eg vert best! også leg me opp til å lage eit system kor me er fri til å bruke n mange (kan og vøre ein enkelt autonom agent med eit skrivemål) eller ein heil orginisasjon, kor ein er fri til  
  velgje personane, rolla dei har, osv. også skal ein junne bruke desse som defauilt. men og kunne lage eigne. så skrivn ein inn eit prosjektnamn, ei beskrivelse av research // redaksjonens mål-. og lastar opp evnt kontektst som dfar og b ilete osv, og kan bruke ein dropdown   
 meny til å bestemme konfigurasjon av kva språkmodell som vert nytta, og om internet søk etc er toggla og lov.                
+
+
+gjer deg kjent med filstrukturen.  du kan ignorere C:\Users\Shadow\Documents\GitHub\co-author\prism-nynorsk for no C:\Users\Shadow\Documents\GitHub\co-author\projects\formgjevars-traktat\output\forsteutgave.pdf det er denne meskal fortsette arbeide med, ! først virder gjennom fleir ulike agentar boka etter ha lese ho, så plan saman i redaaksjonen allef orslaga til betring, så gjennomførerer me dei med 20/80 i bakhovudet (altså gjøre de 20% som gjerne har80% i si!)
