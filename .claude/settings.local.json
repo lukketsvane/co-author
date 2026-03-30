@@ -32,7 +32,8 @@
       "Bash(curl -sL -o nicolaescu-morse-theory.pdf \"https://www3.nd.edu/~lnicolaes/Morse2nd.pdf\")",
       "Bash(pdflatex -interaction=nonstopmode utkast_01.tex)",
       "Bash(PYTHONIOENCODING=utf-8 python -c \":*)",
-      "Bash(pdflatex -interaction=nonstopmode utkast_02.tex)"
+      "Bash(pdflatex -interaction=nonstopmode utkast_02.tex)",
+      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py list)"
     ]
   }
 }

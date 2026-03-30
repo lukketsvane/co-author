@@ -1,0 +1,35 @@
+name: "FORML\xC6RE: L\xC6REBOK"
+slug: formlaere-larebok
+description: >
+  Lærebok i formteori basert på Tractatus Formae. Knyter saman den
+  formelle matematikken frå FORMLÆRE: MATHEMATICA med designhistoriske
+  døme, praksisanalyse og øvingsoppgåver. Skriven på nynorsk for
+  designstudentar og forskarar.
+
+goals:
+  - Pedagogisk framstilling av heile Tractatus Formae
+  - All matematikk frå MATHEMATICA, men med steg-for-steg-bevis og gjennomarbeidde døme
+  - Kvart omgrep knytt til konkrete designhistoriske artefaktar
+  - Vise korleis teorien påverkar ulike praksisar (handverk, industri, parametrisk, AI, biologi)
+  - Øvingsoppgåver i tre nivå per kapittel
+  - Figurar og diagram der dei hjelper forståinga
+
+staff:
+  - wittgenstein
+  - mathematikar
+  - designhistorikar
+  - pedagog
+  - design_og_print
+
+config:
+  default_model: claude-opus-4-6
+  web_search: false
+  language: nynorsk
+
+author: Iver Raknes Finne
+institution: Institutt for design, AHO
+sister_texts:
+  - forsteutgave.pdf
+  - formlaere_mathematica.pdf
+
+created: 2026-03-30T00:00:00
