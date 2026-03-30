@@ -33,7 +33,9 @@
       "Bash(pdflatex -interaction=nonstopmode utkast_01.tex)",
       "Bash(PYTHONIOENCODING=utf-8 python -c \":*)",
       "Bash(pdflatex -interaction=nonstopmode utkast_02.tex)",
-      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py list)"
+      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py list)",
+      "Bash(PYTHONIOENCODING=utf-8 python dist/redaksjon.py build formlaere-larebok)",
+      "Bash(grep -oP '\\\\\\\\begin\\\\{\\(\\\\w+\\)\\\\}' \"C:\\\\Users\\\\Shadow\\\\Documents\\\\GitHub\\\\co-author\\\\projects\\\\formlaere-larebok\\\\utkast\\\\utkast_01-03-30-2026\\\\kapittel_06-09.tex\")"
     ]
   }
 }

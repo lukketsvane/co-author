@@ -1,0 +1,174 @@
+\contentsline {chapter}{Innleiing}{9}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Formrommet}{11}{chapter.8}%
+\contentsline {section}{\numberline {1.1}Kva er eit formrom?}{11}{section.9}%
+\contentsline {section}{\numberline {1.2}Formell definisjon}{11}{section.10}%
+\contentsline {section}{\numberline {1.3}Kompaktheit}{12}{section.14}%
+\contentsline {section}{\numberline {1.4}Regiontypologi}{12}{section.17}%
+\contentsline {section}{\numberline {1.5}Forklaringskravet}{13}{section.23}%
+\contentsline {chapter}{\numberline {2}Seleksjonstrykk}{17}{chapter.26}%
+\contentsline {section}{\numberline {2.1}Kva driv forma?}{17}{section.27}%
+\contentsline {section}{\numberline {2.2}Formell definisjon}{17}{section.28}%
+\contentsline {section}{\numberline {2.3}Dei fem hovudklassane}{18}{section.33}%
+\contentsline {section}{\numberline {2.4}Funksjonen avgrensar, men bestemmer ikkje}{19}{section.39}%
+\contentsline {section}{\numberline {2.5}Teoremet om variasjon under konstant funksjon}{19}{section.42}%
+\contentsline {section}{\numberline {2.6}Motstridande retningar}{20}{section.49}%
+\contentsline {chapter}{\numberline {3}Tilpassingslandskapet}{23}{chapter.54}%
+\contentsline {section}{\numberline {3.1}Fr\r a{} trykk til landskap}{23}{section.55}%
+\contentsline {section}{\numberline {3.2}Tilpassingsfunksjonen}{23}{section.56}%
+\contentsline {section}{\numberline {3.3}Tilpassingslandskapet}{24}{section.61}%
+\contentsline {section}{\numberline {3.4}Teoremet om fleire haugar}{24}{section.64}%
+\contentsline {section}{\numberline {3.5}Stil som attraksjonsbasseng}{25}{section.67}%
+\contentsline {section}{\numberline {3.6}NK-landskap og ruglete terreng}{26}{section.70}%
+\contentsline {chapter}{\numberline {4}Dynamikk}{29}{chapter.71}%
+\contentsline {section}{\numberline {4.1}Landskapet endrar seg}{29}{section.72}%
+\contentsline {section}{\numberline {4.2}Formell definisjon}{29}{section.73}%
+\contentsline {section}{\numberline {4.3}Punktert likevekt}{29}{section.76}%
+\contentsline {section}{\numberline {4.4}Landskapsminne}{30}{section.81}%
+\contentsline {section}{\numberline {4.5}Shannon-entropi over materialbruk}{31}{section.84}%
+\contentsline {chapter}{\numberline {5}Navigatorar}{35}{chapter.85}%
+\contentsline {section}{\numberline {5.1}Kven responderer p\r a{} landskapet?}{35}{section.86}%
+\contentsline {section}{\numberline {5.2}Navigator-trippelet}{35}{section.87}%
+\contentsline {section}{\numberline {5.3}Bane-avhengig m\r altilstand}{36}{section.94}%
+\contentsline {section}{\numberline {5.4}Fem substratklassar}{36}{section.95}%
+\contentsline {section}{\numberline {5.5}Intelligens som evne til \r a{} krysse dalar}{37}{section.96}%
+\contentsline {section}{\numberline {5.6}Kognitiv grenseflate}{38}{section.99}%
+\contentsline {chapter}{\numberline {6}Substrat-uavhengigheit og emergens}{41}{chapter.105}%
+\contentsline {chapter}{\numberline {7}Variasjonsprinsipp}{43}{chapter.106}%
+\contentsline {chapter}{\numberline {8}Empirisk: Materialsignaturar}{45}{chapter.107}%
+\contentsline {chapter}{\numberline {9}Konsekvensar og framtid}{47}{chapter.108}%
+\contentsline {chapter}{\numberline {A}Korrespondansetabell}{49}{appendix.109}%
+\contentsline {chapter}{\numberline {B}Substrat-uavhengigheit og emergens}{51}{appendix.110}%
+\contentsline {section}{\numberline {B.1}Navigasjon er ein eigenskap ved organisering}{51}{section.111}%
+\contentsline {section}{\numberline {B.2}Postulat: Substrat-uavhengig navigasjon}{52}{section.112}%
+\contentsline {paragraph}{Falsifiseringsvilkår.}{52}{paragraph*.118}%
+\contentsline {section}{\numberline {B.3}Posisjonsinvarians}{52}{section.119}%
+\contentsline {paragraph}{Kva teoremet ikkje seier.}{53}{paragraph*.125}%
+\contentsline {paragraph}{Konsekvens.}{53}{paragraph*.126}%
+\contentsline {section}{\numberline {B.4}Emergent navigasjon}{54}{section.127}%
+\contentsline {paragraph}{Den formelle strukturen.}{54}{paragraph*.130}%
+\contentsline {paragraph}{Kvifor er dette ein konjektur og ikkje eit teorem?}{54}{paragraph*.131}%
+\contentsline {paragraph}{Empirisk grunngjeving.}{54}{paragraph*.132}%
+\contentsline {section}{\numberline {B.5}Designhistorisk døme: Topologi møter biologi}{55}{section.133}%
+\contentsline {section}{\numberline {B.6}Gjennomarbeidd døme: Tre navigatorar, éin stol}{56}{section.134}%
+\contentsline {paragraph}{Navigator A: Handverkaren.}{56}{paragraph*.135}%
+\contentsline {paragraph}{Navigator B: Algoritmen.}{56}{paragraph*.136}%
+\contentsline {paragraph}{Navigator C: Evolusjonen.}{56}{paragraph*.137}%
+\contentsline {paragraph}{Samanlikning.}{56}{paragraph*.138}%
+\contentsline {section}{\numberline {B.7}Øvingar}{57}{section.139}%
+\contentsline {chapter}{\numberline {C}Variasjonsprinsipp}{59}{appendix.152}%
+\contentsline {section}{\numberline {C.1}Stigen gjennom formrommet}{59}{section.153}%
+\contentsline {section}{\numberline {C.2}Stiavhengig tilpassing}{59}{section.154}%
+\contentsline {paragraph}{Kva betyr dette?}{59}{paragraph*.157}%
+\contentsline {paragraph}{Falsifiseringsvilkår.}{60}{paragraph*.158}%
+\contentsline {section}{\numberline {C.3}Euler--Lagrange-likninga for designtrajektoriar}{60}{section.159}%
+\contentsline {paragraph}{Steg 1: Definer ein variasjon.}{60}{paragraph*.162}%
+\contentsline {paragraph}{Steg 2: Formuler stasjonaritetsvilkåret.}{61}{paragraph*.163}%
+\contentsline {paragraph}{Steg 3: Rekn ut derivaten.}{61}{paragraph*.164}%
+\contentsline {paragraph}{Steg 4: Partiell integrasjon.}{61}{paragraph*.165}%
+\contentsline {paragraph}{Steg 5: Grenseleddet forsvinn.}{61}{paragraph*.166}%
+\contentsline {paragraph}{Steg 6: Sett saman.}{61}{paragraph*.167}%
+\contentsline {paragraph}{Steg 7: Fundamentallemmaet.}{61}{paragraph*.168}%
+\contentsline {paragraph}{Tolking.}{62}{paragraph*.169}%
+\contentsline {section}{\numberline {C.4}Stigen modifiserer landskapet}{62}{section.170}%
+\contentsline {paragraph}{Konsekvens for praksis.}{62}{paragraph*.173}%
+\contentsline {section}{\numberline {C.5}Spreiingshypotesen}{63}{section.174}%
+\contentsline {paragraph}{Steg 1: Taylor-utvikling rundt maksimumet.}{63}{paragraph*.177}%
+\contentsline {paragraph}{Steg 2: Sett inn i fordelinga.}{63}{paragraph*.178}%
+\contentsline {paragraph}{Steg 3: Les av variansen.}{64}{paragraph*.179}%
+\contentsline {paragraph}{Intuisjon.}{64}{paragraph*.180}%
+\contentsline {section}{\numberline {C.6}Designhistorisk døme: Kublers formtid}{64}{section.181}%
+\contentsline {section}{\numberline {C.7}Gjennomarbeidd døme: Spreiingsrelasjonen i praksis}{65}{section.182}%
+\contentsline {paragraph}{Kategori A: Militærutstyr (sterkt seleksjonstrykk).}{65}{paragraph*.183}%
+\contentsline {paragraph}{Kategori B: Dekorative møblar (svakt seleksjonstrykk).}{65}{paragraph*.184}%
+\contentsline {paragraph}{Kvantitativt estimat.}{65}{paragraph*.185}%
+\contentsline {section}{\numberline {C.8}Øvingar}{66}{section.186}%
+\contentsline {chapter}{\numberline {D}Empirisk: Materialsignaturar}{69}{appendix.199}%
+\contentsline {section}{\numberline {D.1}Frå teori til data}{69}{section.200}%
+\contentsline {section}{\numberline {D.2}Postulat om geometrisk signatur}{69}{section.201}%
+\contentsline {paragraph}{Falsifiseringsvilkår.}{69}{paragraph*.204}%
+\contentsline {paragraph}{Kva betyr dette?}{70}{paragraph*.205}%
+\contentsline {section}{\numberline {D.3}Informasjonsteoremet}{70}{section.206}%
+\contentsline {paragraph}{Del~1: $\MI (G;\, \mathrm {Func}) = 0$.}{70}{paragraph*.209}%
+\contentsline {paragraph}{Del~2: $\MI (G;\, M) > 0$.}{70}{paragraph*.214}%
+\contentsline {paragraph}{Kombinert:}{71}{paragraph*.219}%
+\contentsline {paragraph}{Kvifor er dette viktig?}{71}{paragraph*.220}%
+\contentsline {section}{\numberline {D.4}STOLAR-datasettet}{71}{section.221}%
+\contentsline {subsection}{\numberline {D.4.1}Geometriske profilar per materiale}{71}{subsection.222}%
+\contentsline {subsection}{\numberline {D.4.2}Empiriske informasjonsverdiar}{72}{subsection.223}%
+\contentsline {subsection}{\numberline {D.4.3}Materialentropien over tid}{72}{subsection.224}%
+\contentsline {section}{\numberline {D.5}Designhistorisk døme: Mahognitoppen}{73}{section.225}%
+\contentsline {section}{\numberline {D.6}Gjennomarbeidd døme: Rekn ut gjensidig informasjon}{73}{section.226}%
+\contentsline {paragraph}{Datasettet.}{73}{paragraph*.227}%
+\contentsline {paragraph}{Steg 1: Rekn ut marginalfordeling.}{74}{paragraph*.228}%
+\contentsline {paragraph}{Steg 2: Rekn ut fellesfordeling.}{74}{paragraph*.229}%
+\contentsline {paragraph}{Steg 3: Rekn ut gjensidig informasjon.}{74}{paragraph*.230}%
+\contentsline {paragraph}{Steg 4: Summer.}{75}{paragraph*.231}%
+\contentsline {paragraph}{Tolking.}{75}{paragraph*.232}%
+\contentsline {section}{\numberline {D.7}Øvingar}{75}{section.233}%
+\contentsline {chapter}{\numberline {E}Konsekvensar og framtid}{77}{appendix.246}%
+\contentsline {section}{\numberline {E.1}Provisorisk kompromiss}{77}{section.247}%
+\contentsline {paragraph}{Konsekvens.}{77}{paragraph*.250}%
+\contentsline {section}{\numberline {E.2}Varige tradisjonar}{78}{section.251}%
+\contentsline {paragraph}{I praksis.}{78}{paragraph*.254}%
+\contentsline {section}{\numberline {E.3}Falsifiserbarheit}{78}{section.255}%
+\contentsline {section}{\numberline {E.4}Refleksiv navigasjon}{79}{section.263}%
+\contentsline {section}{\numberline {E.5}Fire praksisar analyserte}{80}{section.264}%
+\contentsline {subsection}{\numberline {E.5.1}Handverksdesign}{80}{subsection.265}%
+\contentsline {paragraph}{Navigatoren.}{80}{paragraph*.266}%
+\contentsline {paragraph}{Formrommet.}{80}{paragraph*.267}%
+\contentsline {paragraph}{Seleksjonstrykka.}{80}{paragraph*.268}%
+\contentsline {paragraph}{Tilpassingslandskapet.}{80}{paragraph*.269}%
+\contentsline {paragraph}{Eksplorasjon og eksploitering.}{80}{paragraph*.270}%
+\contentsline {paragraph}{Styrke og svakheit.}{81}{paragraph*.271}%
+\contentsline {subsection}{\numberline {E.5.2}Industridesign}{81}{subsection.272}%
+\contentsline {paragraph}{Navigatoren.}{81}{paragraph*.273}%
+\contentsline {paragraph}{Formrommet.}{81}{paragraph*.274}%
+\contentsline {paragraph}{Seleksjonstrykka.}{81}{paragraph*.275}%
+\contentsline {paragraph}{Eksplorasjon og eksploitering.}{81}{paragraph*.276}%
+\contentsline {paragraph}{Modulering.}{81}{paragraph*.277}%
+\contentsline {subsection}{\numberline {E.5.3}Parametrisk og algoritmisk design}{81}{subsection.278}%
+\contentsline {paragraph}{Navigatoren.}{81}{paragraph*.279}%
+\contentsline {paragraph}{Formrommet.}{82}{paragraph*.280}%
+\contentsline {paragraph}{Seleksjonstrykka.}{82}{paragraph*.281}%
+\contentsline {paragraph}{Eksplorasjon og eksploitering.}{82}{paragraph*.282}%
+\contentsline {paragraph}{Latent rom.}{82}{paragraph*.283}%
+\contentsline {subsection}{\numberline {E.5.4}Generativ AI-design}{82}{subsection.284}%
+\contentsline {paragraph}{Navigatoren.}{82}{paragraph*.285}%
+\contentsline {paragraph}{Formrommet.}{82}{paragraph*.286}%
+\contentsline {paragraph}{Seleksjonstrykka.}{82}{paragraph*.287}%
+\contentsline {paragraph}{Temperatur og spreiing.}{82}{paragraph*.288}%
+\contentsline {paragraph}{Diffusjonsmodellar.}{83}{paragraph*.289}%
+\contentsline {paragraph}{Styrke og svakheit.}{83}{paragraph*.290}%
+\contentsline {subsection}{\numberline {E.5.5}Evaluering langs fire aksar}{83}{subsection.291}%
+\contentsline {section}{\numberline {E.6}Kva betyr dette for designutdanning?}{84}{section.292}%
+\contentsline {section}{\numberline {E.7}Øvingar}{84}{section.298}%
+\contentsline {chapter}{\numberline {A}Korrespondansetabell}{87}{appendix.313}%
+\contentsline {chapter}{\numberline {B}Notasjonsoversyn}{89}{appendix.314}%
+\contentsline {chapter}{\numberline {C}Øvingsnøkkel}{91}{appendix.315}%
+\contentsline {paragraph}{Øving~\ref {ex:6.1}.}{91}{paragraph*.316}%
+\contentsline {paragraph}{Øving~\ref {ex:6.2}.}{91}{paragraph*.317}%
+\contentsline {paragraph}{Øving~\ref {ex:6.3}.}{91}{paragraph*.318}%
+\contentsline {paragraph}{Øving~\ref {ex:6.4}.}{91}{paragraph*.319}%
+\contentsline {paragraph}{Øving~\ref {ex:6.5}.}{92}{paragraph*.320}%
+\contentsline {paragraph}{Øving~\ref {ex:6.6}.}{92}{paragraph*.321}%
+\contentsline {paragraph}{Øving~\ref {ex:7.1}.}{92}{paragraph*.322}%
+\contentsline {paragraph}{Øving~\ref {ex:7.2}.}{92}{paragraph*.323}%
+\contentsline {paragraph}{Øving~\ref {ex:7.3}.}{92}{paragraph*.324}%
+\contentsline {paragraph}{Øving~\ref {ex:7.4}.}{92}{paragraph*.325}%
+\contentsline {paragraph}{Øving~\ref {ex:7.5}.}{92}{paragraph*.326}%
+\contentsline {paragraph}{Øving~\ref {ex:7.6}.}{93}{paragraph*.327}%
+\contentsline {paragraph}{Øving~\ref {ex:8.1}.}{93}{paragraph*.328}%
+\contentsline {paragraph}{Øving~\ref {ex:8.2}.}{93}{paragraph*.329}%
+\contentsline {paragraph}{Øving~\ref {ex:8.3}.}{93}{paragraph*.330}%
+\contentsline {paragraph}{Øving~\ref {ex:8.4}.}{93}{paragraph*.331}%
+\contentsline {paragraph}{Øving~\ref {ex:8.5}.}{93}{paragraph*.332}%
+\contentsline {paragraph}{Øving~\ref {ex:8.6}.}{94}{paragraph*.333}%
+\contentsline {paragraph}{Øving~\ref {ex:9.1}.}{94}{paragraph*.334}%
+\contentsline {paragraph}{Øving~\ref {ex:9.2}.}{94}{paragraph*.335}%
+\contentsline {paragraph}{Øving~\ref {ex:9.3}.}{94}{paragraph*.336}%
+\contentsline {paragraph}{Øving~\ref {ex:9.4}.}{94}{paragraph*.337}%
+\contentsline {paragraph}{Øving~\ref {ex:9.5}.}{95}{paragraph*.338}%
+\contentsline {paragraph}{Øving~\ref {ex:9.6}.}{95}{paragraph*.339}%
+\contentsline {paragraph}{Øving~\ref {ex:9.7}.}{95}{paragraph*.340}%
+\contentsline {chapter}{\numberline {A}Korrespondansetabell}{97}{appendix.341}%
+\contentsline {chapter}{\numberline {B}Notasjonsoversyn}{99}{appendix.342}%

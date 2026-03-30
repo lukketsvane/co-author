@@ -564,8 +564,9 @@ def build_latex(project_dir: Path, draft_path: Path) -> Path | None:
     stem = draft_path.stem
     work_tex = output_dir / tex_name
 
-    # Copy draft to output
-    shutil.copy2(draft_path, work_tex)
+    # Copy all .tex files from the draft folder (main + \input files)
+    for tex_file in draft_path.parent.glob("*.tex"):
+        shutil.copy2(tex_file, output_dir / tex_file.name)
 
     # Copy references.bib if exists
     bib_src = project_dir / "references.bib"
