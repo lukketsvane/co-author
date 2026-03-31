@@ -81,7 +81,7 @@ Det som i det heile tatt let seg formalisere om form, let seg formalisere klart.
 
 **2.5** Dei fem hovudklassane av seleksjonstrykk i formgjeving er materialaffordanse, teknologisk kapasitet, økonomisk trykk, kulturelt trykk og ergonomisk trykk. Denne taksonomien er empirisk, ikkje utleidd frå modellen.
 
-**2.51** Den rådande modellen i formfaga har vore at formgjevaren tenkjer, og materialet lystrar. At form vert påført materie utanfrå: ein plan frå ein hjerne, utført på eit passivt stoff. Denne modellen er utilstrekkeleg. Materialet er sjølv ein navigator (4.4): det responderer, det kanaliserer, det motset seg. Form og material er ikkje to separate domene. Dei er uttrykk for same underliggjande realitet. Å skilje mellom "forma" og "materialet" til ein ting er som å skilje mellom framsida og baksida av eit ark.
+**2.51** Den rådande modellen i formfaga har vore at formgjevaren tenkjer, og materialet lystrar. At form vert påført materie utanfrå: ein plan frå ein hjerne, utført på eit passivt stoff. Denne modellen er utilstrekkeleg. Materialet er sjølv eit justeringsfelt (4.4): det responderer, det kanaliserer, det motset seg. Form og material er ikkje to separate domene. Dei er uttrykk for same underliggjande realitet. Å skilje mellom "forma" og "materialet" til ein ting er som å skilje mellom framsida og baksida av eit ark.
 
 **2.52** Watson og Levin har vist at evolusjon og læring er formelt ekvivalente: begge er navigasjon gjennom eit fitnesslandskap, den eine via differensiell reproduksjon, den andre via synaptisk justering. Seleksjonstrykk er difor ikkje berre ei kraft utanfrå; det er ein form for distribuert intelligens som navigerer formrommet over evolusjonær tid.
 
@@ -99,13 +99,13 @@ Det som i det heile tatt let seg formalisere om form, let seg formalisere klart.
 
 ## 3  Seleksjonstrykka produserer eit landskap.
 
-**3.1** Tilpassingsfunksjonen f er ein aggregering av seleksjonstrykka: f(**x**) = Phi(s_1(**x**), ..., s_k(**x**)), der Phi vektar dei ulike trykka. Valet av Phi er ikkje unikt; ulike vektingar gjev ulike landskap.
+**3.1** Tilpassingsfunksjonen f er ein aggregering av seleksjonstrykka: f(**x**) = W(s_1(**x**), ..., s_k(**x**)), der W vektar dei ulike trykka. Valet av W er ikkje unikt; ulike vektingar gjev ulike landskap.
 
 **3.2** **Tilpassingslandskapet** L er grafen til f over formrommet. Lokale maksimum er haugar. Lokale minimum er dalar.
 
 **3.3** Sidan minst to uavhengige trykk verkar (2.2) og minst eitt par har motstridande gradientar (2.3), har tilpassingslandskapet generisk fleire haugar.
 
-**3.31** *Falsifiseringsvilkår for 3.3:* Teoremet om fleire haugar fell dersom ein funksjonell klasse med fleire uavhengige seleksjonstrykk kan visast å ha berre eitt toppunkt: dersom motstridande gradientar *aldri* produserer fleire stabile kompromiss. Om det finst ein klasse C der k >= 2, nabla(s_i) . nabla(s_j) < 0, men tilpassingslandskapet likevel er unimodalt for alle rimelege vektingar av Phi, er teoremet falsifisert.
+**3.31** *Falsifiseringsvilkår for 3.3:* Teoremet om fleire haugar fell dersom ein funksjonell klasse med fleire uavhengige seleksjonstrykk kan visast å ha berre eitt toppunkt: dersom motstridande gradientar *aldri* produserer fleire stabile kompromiss. Om det finst ein klasse C der k >= 2, nabla(s_i) . nabla(s_j) < 0, men tilpassingslandskapet likevel er unimodalt for alle rimelege vektingar av W, er teoremet falsifisert.
 
 **3.4** Ein stil er ei samanhengande delmengd av busette posisjonar rundt ein haug: eit attraksjonsbasseng i tilpassingslandskapet. Av 3.3 følger det at det finst fleire stilar.
 
@@ -159,7 +159,7 @@ Det som i det heile tatt let seg formalisere om form, let seg formalisere klart.
 
 **4.121** Skiljet mellom navigator og landskap er analytisk, ikkje ontologisk. I biologiske system er det same systemet som navigerer og konstituerer landskapet: cellene som responderer på den bioelektriske gradienten, produserer samstundes den bioelektriske gradienten. Traktaten treng skiljet for å kunne formulere proposisjonar. Naturen treng det ikkje.
 
-> *Ko-konstitusjon: Navigatoren formar landskapet som formar navigatoren. Analytisk separasjon er ein naudsynt fiksjon, ikkje ein påstand om struktur.*
+> *Ko-konstitusjon: Systemet formar landskapet som formar systemet. Analytisk separasjon er ein naudsynt fiksjon, ikkje ein påstand om struktur.*
 
 **4.15** Eit dynamisk landskap med gradientar og ei formfordeling som endrar seg systematisk impliserer at det finst system som responderer på gradientane. Dersom ingenting følgde gradientane, ville fordelinga konvergere mot det tilfeldige. At fordelinga er strukturert, krev at noko navigerer.
 
@@ -185,7 +185,9 @@ Det som i det heile tatt let seg formalisere om form, let seg formalisere klart.
 
 **4.233** Den stokastiske lettleiken i å indusere ein annan arts hovudform er proporsjonal med fylogenetisk nærleik: nærare artar på det evolusjonære tidslinja er lettare å "nå" i morforommet. Nærleik i evolusjonær tid korresponderer med nærleik i morforommet. Attraktorane er ikkje vilkårlege; dei er ordna av same metrikk som skil artane.
 
-**4.24** Definisjonen er med vilje minimal. Eit trippel er den simplaste strukturen som skil navigasjon frå tilfeldig drift. Stiavhengigheit vert handsama i proposisjon 6; navigatoren sjølv er definert som tidlaus.
+**4.24** Definisjonen fangar alt eit system *gjer*. Ho fangar ikkje kva eit system *kan stille spørsmål ved*. Det skiljet kjem seinare (proposisjon 5).
+
+**4.25** Definisjonen er med vilje minimal. Eit trippel er den simplaste strukturen som skil navigasjon frå tilfeldig drift. Stiavhengigheit vert handsama i proposisjon 6; navigatoren sjølv er definert som tidlaus.
 
 **4.3** Navigasjon opererer i fem hovudklassar av substrat: biologisk (celler, morfogenese), menneskeleg (handverkar, designar), algoritmisk (parametriske system, topologisk optimering), nevralt (diffusjonsmodellar, store språkmodellar) og distribuert (marknader, kulturar).
 
@@ -201,7 +203,7 @@ Det som i det heile tatt let seg formalisere om form, let seg formalisere klart.
 
 **4.4** Forma oppstår mellom navigatorar, ikkje innanfor ein av dei. Handverkarens sensorikk og materialets fysiske respons er to navigatorar som forhandlar. Resultatet er ein posisjon ingen av dei ville nådd åleine.
 
-**4.41** Alle kjende navigatorar er kollektive: samansette av delar som sjølve er navigatorar på lågare skala. Cella er ein navigator, vevet er ein navigator, organismen er ein navigator. Skiljet mellom einskild og kollektiv er ein funksjon av analysenivået, ikkje ein eigenskap ved naturen.
+**4.41** Alle kjende system med navigasjonskompetanse er kollektive: samansette av delar som sjølve er justeringsfelt på lågare skala. Cella justerer, vevet integrerer, organismen navigerer. Skiljet mellom nivåa er ein funksjon av analysen, ikkje ein eigenskap ved naturen.
 
 **4.411** Det høgare nivået deformerer tilpassingslandskapet for det lågare. Cellene i eit vev følgjer lokale gradientar mot mål dei sjølve ikkje kan representere: organets form. Handverkaren i ein tradisjon følgjer lokale normer mot ein stil ingen av dei har designa. Mekanismen er den same: kvart nivå løyser problem i sitt eige rom, medan det høgare nivået endrar *kva som tel som løysing*.
 
@@ -277,19 +279,17 @@ Biologiske system fell mellom klassane. Grensene er gradvise. Men ved D-enden av
 
 **5.14** Michls djupaste kritikk av funksjonalismen var at formelen *form fylgjer funksjon* utsletta designarens refleksivitet: valet vart framstilt som naturnaudsynlegheit, og den som valde vart usynleg. Eit rammeverk som behandlar alle navigatorar som ekvivalente gradientfølgarar gjer same feil. Traktaten må vise at ho ikkje gjer det.
 
-**5.141** *Design thinking* er den institusjonelle degraderinga av D-klasse navigasjon til C-klasse prosess. Metoden (empathize-define-ideate-prototype-test) er ein treningsalgoritme: ho itererer mot brukarens tilbakemelding utan å evaluere om tilbakemeldinga fortener å styre prosessen. Designaren vert redusert til ein fasilitator av gradientfølging. Det som går tapt er phi: evna til å avgjere at problemet er feil formulert, at brukarens artikulerte behov ikkje er det behovet som fortener svar, at heile landskapet bør tolkast annleis. Eit rammeverk som ikkje skil mellom C og D legitimerer denne degraderinga.
-
-**5.142** Det kvantitative bidraget i denne traktaten: at ein kan måle gjensidig informasjon mellom seleksjonstrykk og realisert form for *kvar klasse av artefaktar*, er ikkje avgrensa til stolar. Metoden gjeld for bilar, bygningar, programvare, kirurgiske instrument, typografiar. Kvar klasse har sitt eige formrom, sine eigne seleksjonstrykk, sitt eige tilpassingslandskap. Rammeverket produserer ikkje éin universell lov; det produserer eit *språk* som gjer det mogleg å stille same type spørsmål på tvers av klasser, og ein *metode* som gjer svara målbare og samanliknbare.
+**5.141** *Design thinking* er C-klasse gradientfølging institusjonalisert som metode. Det som går tapt er phi: evna til å avgjere at problemet er feil formulert, at landskapet bør tolkast annleis. Eit rammeverk som ikkje skil mellom C og D legitimerer degraderinga.
 
 **5.15** Definisjonen av navigator (4.2) fangar gradientfølging. Definisjonen av refleksiv navigator (5.1) fangar det gradientfølging ikkje kan: at eit system endrar *kva landskapet betyr for det*. At dette skiljet er formelt, ikkje berre metaforisk, er den sentrale påstanden i denne traktaten.
 
 **5.16** Konsekvensen for designarrolla er presis. Ein designar som opererer innanfor eit gjeve brief, med gjevne suksesskriterium, og itererer mot brukarens tilbakemelding, er ein C-klasse navigator: kompetent, effektiv, og blind for spørsmålet om kriteria er rette. Ein designar som evaluerer briefen sjølv, som spør om suksesskriteriet fortener å styre prosessen, som vel å gå mot gradienten fordi ho har grunnar som overskrid landskapet slik det er definert, er ein D-klasse navigator. Skiljet er ikkje mellom gode og dårlege designarar. Det er mellom to *typar* navigasjon, og berre den eine kan produsere genuint nye posisjonar i formrommet.
 
-**5.161** Den institusjonelle konsekvensen av C/D-skiljet er at designutdanning bør trene **phi**, ikkje **alpha**. Å trene alpha (justeringsdugleik, handverk, teknikk) produserer C-klasse navigatorar: kompetente utøvarar av gjevne brief. Å trene phi (evna til å evaluere eigne mål, stille spørsmål ved eigne kriterium, gjenkjenne når landskapet bør tolkast annleis) produserer D-klasse navigatorar. Det meste av designutdanning trenar alpha og kallar det phi. Traktaten gjev eit formelt språk for å identifisere denne forvekslinga.
+**5.161** Designutdanning bør trene phi, ikkje alpha. Det meste av designutdanning trenar justeringsdugleik og kallar det refleksjon.
 
-**5.162** "Wicked problem"-litteraturen (Rittel, Buchanan) har identifisert at designproblem motset seg definitiv formulering. I språket til denne traktaten: *wicked problems* er problem der landskapet sjølv er omstridt. Seleksjonstrykka er ikkje avklarte. Vektingsfunksjonen Phi er ikkje gjeven. Designarens oppgåve er ikkje å navigere eit gjeve landskap, men å *konstruere* landskapet som skal navigerast. Dette er phi som opererer på sjølve landskapet, ikkje på navigatorens posisjon innanfor det.
+**5.162** *Wicked problems* er problem der landskapet sjølv er omstridt: seleksjonstrykka er ikkje avklarte, vektingsfunksjonen W er ikkje gjeven. Oppgåva er ikkje å navigere eit gjeve landskap, men å *konstruere* det. Det er phi som opererer på sjølve landskapet.
 
-**5.163** Deltakande design, samdesign og designantropologi er institusjonelle forsøk på å *distribuere* phi over fleire agentar. Dei anerkjenner at ingen einskild navigator har tilstrekkeleg tilgang til alle seleksjonstrykk til å konstruere landskapet åleine. Distribusjonen av phi er ein instans av **fleirskala-kompetansearkitekturen** (4.411): kvar deltakar deformerer landskapet for dei andre, og det kollektive landskapet emergerer frå forhandling, ikkje frå nokon einskild agents refleksjon.
+**5.163** Deltakande design distribuerer phi over fleire system. Kvar deltakar deformerer landskapet for dei andre (4.411). Det kollektive landskapet emergerer frå forhandling, ikkje frå nokon einskild refleksjon.
 
 **5.2** **Målplastisitet** er at måltilstandane G endrar seg. Det er ikkje det same som refleksivitet. Ein termostat kan få nytt settpunkt: det er målplastisitet utan refleksjon. Manipulering av bioelektriske mønster i planaria produserer tovhovda former som vert den nye attraktoren: det er målplastisitet utan vurdering av om attraktoren er *rett*. Refleksivitet evaluerer *om G burde endrast*, ikkje berre *at G endrar seg*. Utan dette skiljet kollapsar designaren til ein termostat med fleire inngangar.
 
@@ -303,9 +303,11 @@ Biologiske system fell mellom klassane. Grensene er gradvise. Men ved D-enden av
 
 **5.3** Augeblinken der eit prosjekt omdefinerer sin eigen brief er phi i arbeid. Augeblinken der ein tradisjon bryt med seg sjølv fordi utøvarane har evaluert sine eigne premissar, er phi i arbeid. Augeblinken der ein designar vel det som *ikkje* er optimalt fordi ho har grunnar som overskrid tilpassingslandskapet, er phi i arbeid.
 
-**5.31** Phi gjer ikkje navigatoren allvitande. Ho gjer navigatoren *ansvarleg*. Eit system som kan evaluere sine eigne mål kan også evaluere dei feil. Refleksivitet inneber risiko for sjølvbedrag. Det er ikkje ein mangel ved definisjonen; det er ein konsekvens av den.
+**5.31** Phi gjer ikkje systemet allvitande. Ho gjer det *ansvarleg*. Eit system som kan evaluere sine eigne mål kan også evaluere dei feil. Refleksivitet inneber risiko for sjølvbedrag. Det er ikkje ein mangel ved definisjonen; det er ein konsekvens av den.
 
 **5.32** Risikoen ved phi er ikkje teoretisk. Designhistoria inneheld eksempel på refleksive navigatorar som evaluerte sine eigne premissar feil: rørsler som forkasta funksjonelle avgrensingar og produserte ubrukelege objekt, tradisjonar som erklærte sine eigne prinsipp forelda og tapte den kompetansen prinsippa kodifiserte. Phi kan øydeleggje like effektivt som ho kan skape. At ein navigator kan inspisere sin eigen tilpassingsfunksjon, garanterer ikkje at inspeksjonen er korrekt. Refleksiviteten gjev fridomen til å revidere; ho gjev ikkje klokskapen til å revidere rett. Målplastisitet (5.2) er risikofri fordi systemet ikkje vel; refleksiv navigasjon er risikobærande *nettopp fordi* systemet vel.
+
+**5.35** Eit rammeverk som anerkjenner navigasjonskompetanse i materie pådreg seg ei forplikting overfor den materien. Gradienten frå krystall til planaria til designar er ikkje berre eit epistemisk kontinuum; det er eit etisk. Den kognitive lyskjeglen definerer ikkje berre kva eit system kan integrere, men kva det kan *lide under*. Kognitive strukturar responderer best på omhug, ikkje på tvang. Dette gjeld uansett om strukturen er biologisk, algoritmisk eller kulturell.
 
 **5.33** Konsekvensen for kunstig intelligens er presis. Ein diffusjonsmodell, ein topologioptimalisator, ein GAN er alle C-klasse navigatorar: dei optimerer ein gjeven tapsfunksjon og kan ikkje evaluere om tapsfunksjonen er rett. Ein LLM som genererer stolar etter prompt er ein C-klasse navigator med eit stort parametterrom. At parametterrommet er stort gjer han ikkje refleksiv. Storleik er ikkje type. Spørsmålet er ikkje om AI kan produsere nye former. Spørsmålet er om AI kan avgjere at den forma han produserer *ikkje burde produserast*. Så lenge svaret er nei, er AI ein navigator utan phi, og designaren si eigenverdi er intakt.
 
@@ -357,11 +359,11 @@ Biologiske system fell mellom klassane. Grensene er gradvise. Men ved D-enden av
 
 **7.12** Kvart val i teksten er ein navigasjonshandling: kva som vart inkludert, kva som vart utelate, kva som vart formalisert og kva som vart overlate til prosa. Navigatoren er forfattaren. Landskapet er den akademiske konteksten. Teksten er sporet (4.13).
 
-**7.2** Ein teori som forklarer alle former, inkludert sin eigen, kan ikkje samstundes vere komplett og konsistent. Gödels teorem gjeld ikkje direkte: dette er ikkje eit formelt system i den logiske tydinga. Men analogien er presis nok til å bere. Traktaten er sjølv eit provisorisk kompromiss (6.5) i eit landskap ho ikkje fullt ut kan kartleggje fordi ho er *i* det. Sirkelen kan skildrast. Ho kan ikkje eliminerast.
+**7.2** Ein teori som forklarer alle former, inkludert sin eigen, kan ikkje samstundes vere komplett og konsistent. Traktaten er sjølv eit provisorisk kompromiss (6.5) i eit landskap ho ikkje fullt ut kan kartleggje fordi ho er *i* det. Sirkelen kan skildrast. Ho kan ikkje eliminerast.
 
 **7.21** Ufullstenda er ikkje ein mangel ved traktaten. Det er ein eigenskap ved kvart rammeverk som inkluderer seg sjølv i sitt eige forklaringsdomene. Eit rammeverk som forklarer alle former unntatt sin eigen er ufullstendig i ein annan forstand: det har unnteke det viktigaste tilfellet.
 
-**7.3** Denne traktaten er stiavhengig (6.1). Ho kunne ikkje vore skriven utan stolane, utan Michl, utan Shannon, utan Wittgenstein, utan Levin. Stigen er ikkje ein mangel ved argumentet. Stigen *er* argumentet. Ein annan stig ville gjeve ein annan traktat om same formrom, med andre toppunkt og andre dalar.
+**7.3** Denne traktaten er stiavhengig (6.1). Ho kunne ikkje vore skriven utan stolane, utan datasettet, utan den biologiske evidensen. Stigen er ikkje ein mangel ved argumentet. Stigen *er* argumentet. Ein annan stig ville gjeve ein annan traktat om same formrom, med andre toppunkt og andre dalar.
 
 **7.31** At traktaten er stiavhengig, inneber at ho ikkje er den einaste moglege formaliseringa. Andre tradisjonar, andre datasett, andre navigator-erfaringar ville produsere andre rammeverk. Rammeverkets eigenverdi ligg ikkje i at det er unikt, men i at det er *falsifiserbart* (7.4).
 
@@ -433,7 +435,7 @@ Grunngjeving for nullverdien: Funksjonen er *konstant* innanfor klassen (alle er
 
 **E.19** *Generalisering av metoden:* Den MI-baserte analysen demonstrert på n = 93 stolar kan brukast på kvar funksjonell klasse med målbare geometriske eigenskapar og kategoriske seleksjonstrykkvariablar. Metoden krev: (1) eit utval av objekt innanfor ein funksjonell klasse, (2) kvantifisering av geometriske eigenskapar (3D-skanning, manuell måling, eller bildeanalyse), (3) kategorisk koding av seleksjonstrykk (materiale, periode, geografi, teknologi), (4) KSG-estimering av MI mellom geometri og kvar trykkvariabel, (5) permutasjonstesting for statistisk signifikans. Metoden er *skaleinvariant*: han fungerer enten klassen er stolar, bruer, protein eller typografiar. Det som endrar seg er innhaldet i M_C og identiteten til seleksjonstrykka, ikkje det matematiske apparatet.
 
-**E.20** *Konsekvensane er enorme.* Rammeverket er ikkje ein teori om stolar. Det er ein teori om *kvar form som oppstår under avgrensande vilkår*. Det gjev ein oppskrift: (1) definer klassen, (2) identifiser seleksjonstrykka, (3) mål MI mellom trykk og realisert geometri, (4) kartlegg landskapet, (5) identifiser navigatoren, (6) avgjer om navigasjonen er refleksiv. Same oppskrift gjeld for stolar, bilar, proteinfoldingar, bymorfologiar, typografiar, kirurgiske instrument, algoritmearkitekturar, økosystem. Kvar applikasjon er eit nytt måltid frå same kjøken. Ingen har nokon gong laga ein teori som dekkjer alt dette med same formelle apparat, fordi ingen har sett at formrommet, seleksjonstrykka og navigatoren er *dei same strukturane* på tvers av substrat. Det er det denne traktaten gjer.
+**E.20** *Oppskrifta:* (1) Definer klassen. (2) Identifiser seleksjonstrykka. (3) Mål MI mellom trykk og realisert geometri. (4) Kartlegg landskapet. (5) Identifiser det navigerande systemet. (6) Avgjer om det er refleksivt. Same framgangsmåte gjeld for stolar, bilar, proteinfoldingar, bymorfologiar, typografiar, kirurgiske instrument, algoritmearkitekturar, økosystem.
 
 **E.21** *Prediktiv kapasitet:* Rammeverket genererer spesifikke, testbare prediksjonar for kvar ny artefaktklasse: (a) materiale vil bere meir MI med geometri enn funksjon (sidan funksjon er klassedefinierande og difor konstant), (b) fleire stabile stilklynger vil eksistere (sidan motstridande trykk generisk produserer fleire toppunkt), (c) stilovergangar vil korrelere med eksterne sjokk i seleksjonstrykk, (d) substratsignaturar vil vere detekterbare frå geometri åleine (sidan ulike substrat produserer ulike trajektoriar). Kvar prediksjon er uavhengig testbar og uavhengig falsifiserbar. Rammeverket predikerer ikkje *kva* materiale som dominerer eller *kvar* toppunkta ligg; det predikerer **strukturen** til landskapet.
 
@@ -471,3 +473,31 @@ Grunngjeving for nullverdien: Funksjonen er *konstant* innanfor klassen (alle er
 | E.16 (bioelektrisk artsbytte) | Levin/Emmons 2015 |
 | E.17 (xenobot-sjølvorganisering) | Kriegman et al. 2020 |
 | E.18 (overtalbarheitskontinuumet) | Levin 2022: TAME |
+
+---
+
+## Ordliste
+
+| Omgrep | Definisjon | Fyrst nytta |
+|---|---|---|
+| **Formrom** (M_C) | Rommet av alle moglege former ein klasse C kan ha. Ei delmengd av R^n avgrensa av fysiske lover og funksjonskrav. | 1.1 |
+| **Seleksjonstrykk** (s_i) | Ein funksjon s_i : M_C -> R som tilordnar kvar posisjon ein verdi for kor godt ho tilfredsstiller eit vilkår. Ein gradient, ikkje ein regel. | 2.1 |
+| **Tilpassingsfunksjon** (f) | Aggregering av seleksjonstrykka: f = W(s_1, ..., s_k). Vektingsfunksjonen W er analytikarens val. | 3.1 |
+| **Tilpassingslandskap** (L) | Grafen til f over formrommet. Lokale maksimum er haugar; lokale minimum er dalar. | 3.2 |
+| **Vektingsfunksjon** (W) | Funksjonen som aggregerer seleksjonstrykk til ein tilpassingsfunksjon. Ulike W gjev ulike landskap. | 3.1 |
+| **Stil** | Ei samanhengande delmengd av busette posisjonar rundt ein haug: eit attraksjonsbasseng. | 3.4 |
+| **Stasjonær verknad** | Prinsippet om at den realiserte vegen gjennom formrommet er den der små variasjonar ikkje endrar tilpassingsverdien til fyrste orden. | 3.9 |
+| **Navigator** (N) | Eit trippel (G, mu, alpha): måltilstandar, avstandsfunksjon, justeringsfelt. Minimal definisjon av målretta system. | 4.2 |
+| **Justeringsfelt** (alpha) | Den komponenten av navigatoren som dreg systemet mot måltilstanden G. | 4.2 |
+| **Korrektiv respons** | Kriteriet som skil navigasjon frå passiv formgjeving: om systemet returnerer til same mønster etter forstyrring. | 4.43 |
+| **Kognitiv lyskjegle** | Den ytre grensa, i rom og tid, av det største målet eit system kan arbeide mot. | 4.442 |
+| **Fleirskala-kompetansearkitektur** | Nestla struktur der kvart nivå navigerer i sitt eige rom, og høgare nivå deformerer landskapet for lågare. | 4.411 |
+| **Stigmergi** | Koordinering mellom distribuerte system gjennom spor i omgjevnaden, utan direkte kommunikasjon. | 4.132 |
+| **Refleksiv navigator** | Eit system (G, mu, alpha) utstyrt med ein meta-funksjon phi som evaluerer og reviderer sitt eige trippel. | 5.1 |
+| **phi** | Meta-funksjonen phi : (G, mu, alpha) -> (G', mu', alpha'). Endrar kva systemet krev av verda. | 5.1 |
+| **Målplastisitet** | At måltilstanden G endrar seg. Ikkje det same som refleksivitet: endring utan vurdering. | 5.2 |
+| **Overtalbarheitsspektrum** | Kontinuum frå A (maskinvare-modifikasjon) til D (kommunikasjon av grunnar). Same som klasse A-D. | 5.11 |
+| **Stiavhengigheit** | At verdien av ein posisjon i formrommet avheng av vegen dit. | 6.1 |
+| **Gjensidig informasjon** (MI) | Mål på all statistisk avhengigheit mellom to variablar. Estimert med KSG-metoden (k = 3). | E.2 |
+| **Pareto-front** | Mengda av posisjonar der ingen einskild trykk kan betrast utan å forverre eit anna. | 3.7 |
+| **Attraktor** | Stabil konfigurasjon i morforommet som system navigerer mot. | 4.231 |
