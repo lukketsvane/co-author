@@ -13,9 +13,9 @@ Denne traktaten forsøkjer å svare på eitt spørsmål: kvifor har ting den for
 
 Svara har vore mange: forma følger funksjonen, materialet, marknaden, tidsånda. Men ingen av dei kan forklare den enorme variasjonen i form innanfor éin funksjonell klasse. Funksjonen er konstant; variasjonen er det ikkje. Noko anna er på ferde.
 
-Traktaten byggjer eit rammeverk med fire komponentar: *formrom*, *seleksjonstrykk*, *tilpassingslandskap* og *navigatorar*. Strukturen gjeld uavhengig av substrat. Rammeverket er eit analytisk vokabular, eit koordinatsystem som tvingar spesifikasjon: ein kan ikkje bruke det utan å seie kva navigatoren er, kva trykka er, korleis landskapet ser ut. Når spesifikasjonane er eksplisitte, kan dei testast og forkastast. Jan Michl viste at "form følger funksjon" kollapsa fordi formelen var ufalsifiserbar [michl_fff]. Denne traktaten lukkast berre i den grad ho kan *feile*. Påstandane er testa mot data frå ca. 2300 objekt (1280–2024) frå eit norsk nasjonalmuseum; tala er illustrasjonar, ikkje premissar.
+Traktaten byggjer eit rammeverk med fire komponentar: *formrom*, *seleksjonstrykk*, *tilpassingslandskap* og *navigatorar*. Strukturen gjeld uavhengig av substrat. Rammeverket er eit analytisk vokabular, eit koordinatsystem som tvingar spesifikasjon: ein kan ikkje bruke det utan å seie kva navigatoren er, kva trykka er, korleis landskapet ser ut. Når spesifikasjonane er eksplisitte, kan dei testast og forkastast. Jan Michl viste at "form følger funksjon" kollapsa fordi formelen var ufalsifiserbar [michl_fff]. Påstandane er testa mot data frå ca. 2300 objekt (1280-2024) frå eit norsk nasjonalmuseum; tala er illustrasjonar, ikkje premissar.
 
-Proposisjonane er nummererte etter Wittgensteins konvensjon: 1.1 utdjupar 1, 1.11 utdjupar 1.1. Dei åtte hovudproposisjonane kan lesast som eit samandrag. Kvar proposisjon ber ein opphøgd bokstav som viser logisk status: ᵈdefinisjon, ᵃaksiom, ᵗteorem, ᵒobservasjon, ⁱillustrasjon. Kryssreferansar til den formelle søsterteksten FORMLÆRE: MATHEMATICA er markerte med [M: ...].
+Denne traktaten lukkast berre i den grad ho kan *feile*.
 
 ---
 
@@ -99,7 +99,7 @@ Grensa mellom O og F er ein funksjon av tilgjengeleg teknologi. Formrommet *veks
 
 **1.52** [Teorem: følger av 1.5 og 1.14] Funksjonen *avgrensar* formrommet men *bestemmer ikkje* posisjonen innanfor det. Lat s_1 representere funksjonskravet. Innanfor den funksjonelle klassen C er s_1 per definisjon konstant: alle objekt i klassen oppfyller funksjonen. Sidan det finst minst eitt anna trykk s_2 som varierer over M_C (dette vert postulert formelt i proposisjon 2), er det s_2 (og ikkje s_1) som forklarer den observerte formvariasjonen. [M: Teorem 2.4]
 
-> *Grunngjeving*: Funksjonen definerer klassen, ikkje posisjonen. Alle stolar står for den funksjonelle testen (ei flate å sitje på, mellom 40 og 55 cm over golvet). Alt anna, stolryggen, armlenene, beinets tverrsnitt, overflata, teksturen, er bestemt av *noko anna enn* funksjon. Å forstå at funksjon underbestemmer form er å forstå kvifor me treng resten av denne traktaten [michl_fff; lecorbusier1555modulor2].
+> *Grunngjeving*: Funksjonen definerer klassen, ikkje posisjonen. Alle stolar står for den funksjonelle testen (ei flate å sitje på, mellom 40 og 55 cm over golvet). Alt anna, stolryggen, armlenene, tverrsnittet til beinet, overflata, teksturen, er bestemt av *noko anna enn* funksjon. Å forstå at funksjon underbestemmer form er å forstå kvifor me treng resten av denne traktaten [michl_fff; lecorbusier1555modulor2].
 
 **1.6** [Observasjon] Formrommet er kontinuerleg, men **ikkje uniformt busett**. Dei busette regionane dannar mønster: **klynger** (mange punkt nær kvarandre), **korridorar** (punkt som dannar stiar mellom klynger) og **tomrom** (regionar utan punkt). Desse mønstra krev forklaring.
 
@@ -113,13 +113,15 @@ Grensa mellom O og F er ein funksjon av tilgjengeleg teknologi. Formrommet *veks
 
 > *Falsifiseringsvilkår*: Postulatet fell om det finst ein klasse der fordelinga av former over formrommet er statistisk uskiljeleg frå ei uniform fordeling. Det vil seie: ingen posisjon er meir sannsynleg enn nokon annan, og den observerte fordelinga kan forklarast av rein stokastisk variasjon.
 
+**2.011** [Observasjon] Seleksjonstrykk opererer innanfor det moglege. Fysiske lover som definerer *grensa* av formrommet M_C (1.1) er ikkje seleksjonstrykk; dei er avgrensingar som definerer domenet trykka opererer i. Eit seleksjonstrykk favoriserer; ei avgrensing forbyr. Materialaffordanse (2.51) ligg mellom gradient og vegg: materialet forbyr ikkje former absolutt, men gjer visse former so energikrevjande at dei i praksis er utilgjengelege. Traktaten behandlar alle forminfluensar innanfor M_C som gradientar. Dette er ei forenkling som fungerer godt for kulturell, økonomisk og ergonomisk seleksjon, men som overdriv for tilfelle der fysisk lov nær-determinerer forma.
+
 **2.1** [Definisjon] Eit **seleksjonstrykk** er ein funksjon
 
 > s_i : M_C -> R
 
 som tilordnar kvar posisjon **x** ein reell verdi s_i(**x**) som uttrykkjer kor godt **x** tilfredsstiller det i-te vilkåret. Høgare verdi er betre. [M: Def. 2.1]
 
-**2.11** [Observasjon] Eit seleksjonstrykk er ikkje ein regel som seier *gjer dette*; det er ein gradient som seier *dette er betre enn det*. Skilnaden er avgjerande. Ein regel er diskret: oppfylt eller ikkje. Ein gradient er kontinuerleg: han peikar alltid i ei retning, med varierande styrke. Ein regel produserer éi form. Ein gradient produserer ein *tendens*: ei statistisk overrepresentering av visse posisjonar [michl_formgivning].
+**2.11** [Observasjon] Eit seleksjonstrykk er ikkje ein regel som seier *gjer dette*; det er ein gradient som seier *dette er betre enn det*. Skilnaden er avgjerande. Ein regel er diskret: oppfylt eller ikkje. Ein gradient er kontinuerleg: han peikar alltid i ei retning, med varierande styrke. Ein gradient produserer ein *tendens* [michl_formgivning].
 
 **2.12** [Observasjon] Å forstå form krev at me tenkjer i gradientar, ikkje i reglar. Den deterministiske tradisjonen, frå dei klassiske ordnane til dei modernistiske proposisjonssystema, formulerte reglar [michl_modernismen; michl1986funkis]. Michl har vist at formelen "form følger funksjon" berre er ikkje-triviell dersom "funksjon" refererer til metafysiske Formål (tidsånda, naturen, den moderne epoken), ikkje til brukarens behov [michl_fff]. Resultatet var ein teori som korkje kunne forklare variasjon (fordi reglar ikkje produserer variasjon) eller anerkjenne designarens reelle val (fordi formelen framstilte dei som objektiv naudsynlegheit). Gradientar gjer det: dei trekkjer former i ei retning utan å determinere destinasjonen, og dei lar analytikaren identifisere *kva* som trekkjer.
 
@@ -149,7 +151,7 @@ Det vil seie: å forbetre éin eigenskap forverrar den andre.
 
 **2.31** [Teorem: følger av 2.2 og 2.3] **Kompromiss.** Kvar realisert form **x** i B er eit kompromiss: ein posisjon der dei motstridande trykka er balanserte, ikkje eliminerte. Sidan nabla(s_i) . nabla(s_j) < 0 i minst éin region, finst det ingen posisjon **x** i M_C der alle trykk samstundes er maksimerte. Kvar realisert **x** representerer difor ei avveging. [M: Teorem 2.7]
 
-**2.32** [Teorem: følger av 1.14 og 2.31] **Fleire gyldige kompromiss.** Sidan |B| > 1 (prop. 1.14) og kvar **x** i B er eit kompromiss (teorem 2.31), finst det fleire gyldige kompromiss. Skilnaden mellom to former under same funksjon er ikkje ein feil, men eit uttrykk for at kreftene kan balanserast på meir enn éin måte. [M: Teorem 2.8]
+**2.32** [Teorem: følger av 1.14 og 2.31] **Fleire gyldige kompromiss.** Sidan |B| > 1 (prop. 1.14) og kvar **x** i B er eit kompromiss (teorem 2.31), finst det fleire gyldige kompromiss. [M: Teorem 2.8]
 
 **2.4** [Definisjon] Funksjonen definerer klassen og dermed formrommet. Lat F : R^n -> {0,1} vere indikatorfunksjonen for funksjonskravet. Då er M_C = { **x** i R^n : F(**x**) = 1 }. Funksjonen avgrensar. Innanfor M_C er ho taus. [M: Def. 2.5]
 
@@ -163,7 +165,7 @@ Det vil seie: å forbetre éin eigenskap forverrar den andre.
 
 **2.54** [Illustrasjon] **Kulturelt trykk**: Konformistisk bias (kopier det fleirtalet gjer) produserer konvergens mot mainstream. Prestisje-bias (kopier det dei velukka gjer) spreier former langs maktgeografiske linjer. Innhaldsbias (enkle, symmetriske mønster overlever betre) er ein seleksjonskraft uavhengig av korleis forma vart skapt [sigaki2018entropy].
 
-**2.541** [Illustrasjon] **Statuskonkurranse**: Verdien av ei form avheng av kven andre som har ho. Ein Veblen-vare (eit objekt der etterspurnaden aukar med prisen) er ein posisjon i formrommet der tilpassingsverdien er ein funksjon av adopsjonsgraden: f(**x**, n(**x**)) der n(**x**) er talet på andre som okkuperer same posisjon. Når n aukar, fell f (posisjonell knappheit forsvinn), og navigatoren må flytte til eit nytt punkt. Statuskonkurranse er såleis eit seleksjonstrykk som *sjølv er dynamisk som funksjon av formfordelinga*, ikkje berre av tid (4.1). Den funksjonalistiske tradisjonen var blind for denne dynamikken, fordi tradisjonen nekta å anerkjenne estetiske preferansar som reelle seleksjonskrefter [michl1988status].
+**2.541** [Illustrasjon] **Statuskonkurranse**: Verdien av ei form avheng av kven andre som har ho. Ein Veblen-vare (eit objekt der etterspurnaden aukar med prisen) er ein posisjon i formrommet der tilpassingsverdien er ein funksjon av utbreiingsgraden: f(**x**, n(**x**)) der n(**x**) er talet på andre som okkuperer same posisjon. Når n aukar, fell f (posisjonell knappheit forsvinn), og navigatoren må flytte til eit nytt punkt. Statuskonkurranse er såleis eit seleksjonstrykk som *sjølv er dynamisk som funksjon av formfordelinga*, ikkje berre av tid (4.1). Den funksjonalistiske tradisjonen var blind for denne dynamikken, fordi tradisjonen nekta å anerkjenne estetiske preferansar som reelle seleksjonskrefter [michl1988status].
 
 **2.55** [Illustrasjon] **Ergonomisk trykk**: Kva former kroppen krev. Setebreidde, rygghøgde, sitjevinkel. Ergonomisk trykk er det einaste trykket den deterministiske tradisjonen anerkjende fullt ut [lecorbusier_modulor1; lecorbusier1955modulor2]. At det samstundes er det trykket som forklarer *minst* av den observerte formvariasjonen (sjå 2.61), illustrerer kor misvisande den deterministiske tradisjonen har vore.
 
@@ -263,11 +265,13 @@ der eta_i er ein "impaktfunksjon" som uttrykkjer korleis den realiserte forma **
 
 **4.22** [Observasjon] Kvar generasjon av formgjevarar arvar ikkje berre kunnskap, men heile det bygde og digitale miljøet som tidlegare generasjonar har konstruert. Denne **økologiske arven** avgrensar og mogeleggjer framtidige former. Difor er all formgjeving i praksis *omformgjeving*: navigatoren startar aldri frå ein tom posisjon, men frå ei form som allereie eksisterer i eit landskap som allereie er modifisert av tidlegare former [michl_fff]. Landskapsminne (4.2) er den formelle grunnen til at dette er strukturelt uunngåeleg, ikkje berre eit pragmatisk faktum.
 
+**4.3** [Observasjon] Eit dynamisk landskap med gradientar (3.2) og ei formfordeling som endrar seg systematisk, ikkje berre stokastisk (4.1, 4.12), impliserer at det finst system som responderer på gradientane. Dersom ingen ting følgde gradientane, ville formfordelinga over tid konvergere mot ei tilfeldig fordeling, ikkje mot dei mønstra me observerer (klynger, korridorar, tomrom i 1.6). At fordelinga er strukturert, krev at noko navigerer.
+
 ---
 
 ## 5  Det finst navigatorar som responderer på landskapet.
 
-> *Logisk samanheng*: Proposisjonane 1-4 skildrar rommet, kreftene, landskapet og dynamikken. Men dei seier ingenting om *kven* eller *kva* som responderer på gradientane. At det faktisk *finst* system som responderer på gradientar i tilpassingslandskapet, er ikkje ein logisk konsekvens av proposisjonane 1-4. Det er ein ny antaking, og ho er her formulert som eit postulat.
+> *Logisk samanheng*: Proposisjonane 1-4 skildrar rommet, kreftene, landskapet og dynamikken, og viser at den strukturerte formfordelinga krev system som responderer på gradientane (4.3). Proposisjon 5 definerer kva slike system er og viser at definisjonen ikkje er avgrensa til eitt substrat.
 
 **5.1** [Definisjon] Ein **navigator** N er eit trippel N = (G, mu, alpha) der [M: Def. 6.1]:
 
@@ -323,7 +327,7 @@ der **x_lokal** er eit lokalt maksimum og **x_global** er eit betre globalt alte
 
 **5.41** [Illustrasjon] **Biologisk substrat**: Celler, vev og organismar som formar gjennom vekst, differensiering og morfogenese [turing1952morphogenesis; bessonov2015pattern]. Biologisk formgjeving er gradientfølging i eit biokjemisk tilpassingslandskap. Planaria som regenererer hovud etter amputasjon navigerer tilbake til same posisjon i morforommet uavhengig av kor dei vert kutta. Det bioelektriske mønsteret som kodar måltilstanden G kan overskrivast utan å endre genomet [blackiston2015nerve; lobo2015planarian]. Ekstern intervensjon kan omdirigere navigasjonen: ein berbar bioreaktor som leverer ei spesifikk medikamentblanding til amputasjonssåret hos *Xenopus laevis* utløyser lemmeregenerering som ikkje ville skjedd naturleg [murugan2022bioreactor]. Eksperimentet demonstrerer at navigasjonskapasiteten ligg latent i substratet og kan aktiverast utan å endre genomet, berre ved å endre dei bioelektriske og kjemiske signala som kodar måltilstanden.
 
-**5.42** [Illustrasjon] **Menneskeleg substrat**: Handverkaren, designaren, arkitekten. Eit substrat med høg-bandbreidde sensorikk, kulturelt akkumulert kunnskap, og evne til eksplisitt representasjon av mål [michl_industridesign; michl1996formgivning]. Det menneskelege substratet er unikt i at det kan *reflektere over sin eigen navigasjon*. Refleksjonen er ein mekanisme for å forbetre gradientfølginga, ikkje ei erstatning for den.
+**5.42** [Illustrasjon] **Menneskeleg substrat**: Handverkaren, designaren, arkitekten. Eit substrat med høg-bandbreidde sensorikk, kulturelt akkumulert kunnskap, og evne til eksplisitt representasjon av mål [michl_industridesign; michl1996formgivning]. Det menneskelege substratet er unikt i at det kan *reflektere over sin eigen navigasjon* (sjå 7.61).
 
 **5.43** [Illustrasjon] **Algoritmisk substrat**: Parametriske system, genetiske algoritmar, topologisk optimering. At topologisk optimering og biologisk beinvekst konvergerer mot nesten identiske former under same fysiske gradientar, trass i heilt ulike substrat (silisium vs. karbon), er ein direkte konsekvens av substrat-uavhengig navigasjon [menges2013morphospaces]. Sjå proposisjon 8 for empirisk utdjuping.
 
@@ -337,13 +341,15 @@ der **x_lokal** er eit lokalt maksimum og **x_global** er eit betre globalt alte
 
 **5.52** [Teorem: følger av 5.5 og 5.51] **Substrat-uavhengig mål, substrat-avhengig veg.** Formgjeving er substrat-uavhengig i mål (alle substrat navigerer same formrom under same type seleksjonstrykk) men substrat-avhengig i trajektorie (kvart substrat følger sin eigen veg gjennom rommet). At nasjonal opphavsstad kan predikerast med 76 prosent treffsikkerheit frå rein 3D-geometri er eit bevis for at substrat-signatur er reell og målbar.
 
-**5.6** [Observasjon] Forma oppstår *mellom* navigatorar, ikkje innanfor ein av dei [M: Teorem 8.1]. Handverkarens taktile sensorikk og materialets fysiske respons er to navigatorar som forhandlar. Materialet foreslår. Handverkaren justerer. Materialet responderer. Den ferdige forma er eit resultat av denne forhandlinga.
+**5.6** [Teorem: følger av 5.1 og 5.61] Forma oppstår *mellom* navigatorar, ikkje innanfor ein av dei [M: Teorem 8.1]. Handverkarens taktile sensorikk og materialets fysiske respons er to navigatorar som forhandlar. Den ferdige forma er eit resultat av denne forhandlinga.
 
 **5.61** [Observasjon] Alle kjende navigatorar er kollektive intelligensar, fordi alle er samansette av delar som sjølve er navigatorar på lågare skala [levin2022tame]. Ein solo-keramikar er eit distribuert kognitivt system: 86 milliardar nevron, kvar med sin eigen kognitive grenseflate, koordinerte med verktøy og materiale. Eit CAD-system som lagrar designparametrar spelar same funksjonelle rolle som biologisk minne spelar for organismen [fields2022competency]. Skiljet mellom "einskild navigator" og "kollektiv" er ein funksjon av analysenivået, ikkje ein eigenskap ved naturen: det som ser ut som éin agent ved éin skala, dekomponerer til koordinerte sub-navigatorar ved ein finare skala, og det som ser ut som ein sverm ved éin skala, kan skildrast som éin navigator av høgare orden ved ein grovare skala.
 
 **5.62** [Teorem: følger av 5.1, 5.61] **Emergent navigasjon.** Sidan alle navigatorar er kollektive (5.61), kan navigator-trippelet (G, mu, alpha) vere ein *emergent eigenskap* ved samspelet mellom sub-navigatorar, ikkje reduserbar til nokon einskild av dei. Formelt: lat N_1, N_2, ..., N_m vere sub-navigatorar med trippel (G_j, mu_j, alpha_j). Det kollektive systemet N = {N_1, ..., N_m} kan realisere eit trippel (G, mu, alpha) der G, mu og alpha ikkje er funksjonar av nokon einskild G_j, mu_j, alpha_j, men av den dynamiske interaksjonen mellom alle sub-navigatorane.
 
 > *Grunngjeving*: Xenobotar, konstruerte frå froskeembryo-celler i konfigurasjonar utan evolusjonær historie, navigerer likevel mot koherente former [murugan2022bioreactor]. Navigasjonskompetansen er ikkje lagra i nokon einskild celle sitt genom; ho oppstår frå interaksjonsdynamikken. I designkonteksten svarar dette til prosjekt der det ferdige resultatet ikkje var spesifisert av nokon einskild deltakar, men emergerte frå forhandlinga mellom dei. At navigasjon kan vere emergent, ikkje programmert, er det sterkaste argumentet for at rammeverket gjeld utover dei enklaste navigatorane.
+
+**5.621** [Observasjon] **Grensa for navigatorbegrepet.** Emergent navigasjon (5.62) gjeld system der sub-navigatorane forhandlar og der det emergente trippelet har prediktiv kraft: det kan forklare systemets respons på forstyrring. For system der det stabile mønsteret er fullt determinert av fysiske likningar og ikkje viser korrektiv respons på forstyrring (t.d. reine Turing-mønster i eit lukka kjemisk system, krystallvekst, Benard-celler), er navigator-rammeverket ikkje fruktbart. Grensa mellom emergent navigasjon og rein fysisk dynamikk er grad av *korrektiv respons*: om systemet returnerer til same mønster etter forstyrring, navigerer det; om det konvergerer mot eit nytt mønster utan korrelasjon til det opphavlege, gjer det ikkje det.
 
 ---
 
@@ -355,7 +361,7 @@ der **x_lokal** er eit lokalt maksimum og **x_global** er eit betre globalt alte
 
 > *Ein navigator med ein gjeven kognitiv grenseflate navigerer eit formrom under seleksjonstrykk frå eit dynamisk tilpassingslandskap.*
 
-**6.11** [Observasjon] Formuleringa er ein konsekvens av definisjonane, og i den forstand er ho nær-tautologisk. Verdien hennar ligg ikkje i at ho er overraskande, men i at ho tvingar ein til å spesifisere kvart ledd: *kva* er navigatoren, *kva* er formrommet, *kva* er seleksjonstrykka, *korleis* ser tilpassingslandskapet ut. Formuleringa er eit *analytisk verktøy*, ikkje ein empirisk oppdaging.
+**6.11** [Observasjon] Formuleringa er ein konsekvens av definisjonane, og i den forstand er ho tilnærma tautologisk. Verdien hennar ligg i at ho tvingar ein til å spesifisere kvart ledd: *kva* er navigatoren, *kva* er formrommet, *kva* er seleksjonstrykka, *korleis* ser tilpassingslandskapet ut.
 
 **6.12** [Illustrasjon] Det deterministiske aksiomet "form følger funksjon" er eit spesialtilfelle av 6.1 der alle seleksjonstrykk utanom ergonomi er lik null og substratet er ubegrensa. Sidan dette vilkåret aldri er oppfylt, er aksiomet alltid ei forenkling. Michl har vist at aksiomet aldri var meint som ein empirisk hypotese; det var ein retorisk strategi som let designaren presentere eigne estetiske val som objektiv naudsynlegheit [michl_fff].
 
@@ -363,15 +369,11 @@ der **x_lokal** er eit lokalt maksimum og **x_global** er eit betre globalt alte
 
 **6.2** [Teorem: følger av 6.1 og 5.12] Formuleringa gjer det mogleg å samanlikne formgjevingsprosessar **på tvers av substrat** med same vokabular. Samanlikninga er taksonomisk: ho viser at same strukturelle omgrep kan applikerast, ikkje at same mekanisme verkar. At same vokabular passar er eit teikn på at modellen er *fruktbar*, ikkje eit bevis for at den er *sann*.
 
-**6.21** [Illustrasjon] **Biologisk morfogenese**: Navigator = cellulær signalering og genuttrykk. Formrom = rommet av moglege kroppsformar. Seleksjonstrykk = naturleg seleksjon, fysiske lover, utviklingsavgrensingar. Tilpassingslandskap = det adaptive landskapet. Eksplorasjon = mutasjon, genetisk drift. Eksploitering = stabiliserande seleksjon [turing1952morphogenesis; bessonov2015pattern].
+**6.21** [Illustrasjon] **Biologisk morfogenese**: Navigator = cellulær signalering og genuttrykk. Formrom = rommet av moglege kroppsformar. Seleksjonstrykk = naturleg seleksjon, fysiske lover, utviklingsavgrensingar. Eksplorasjon = mutasjon, genetisk drift. Eksploitering = stabiliserande seleksjon [turing1952morphogenesis; bessonov2015pattern].
 
-**6.22** [Illustrasjon] **Handverksdesign**: Navigator = handverkar + verktøy + materiale. Formrom = rommet av former verktøy og materiale kan realisere. Seleksjonstrykk = oppdragsgjevar, tradisjon, materialøkonomi. Tilpassingslandskap = marknad + kultur + ergonomi. Eksplorasjon = eksperiment, feilgrep. Eksploitering = meisterarbeid, gjentaking, perfeksjonering [michl_industridesign].
+**6.22** [Illustrasjon] **Handverksdesign**: Navigator = handverkar + verktøy + materiale. Formrom = rommet av former verktøy og materiale kan realisere. Seleksjonstrykk = oppdragsgjevar, tradisjon, materialøkonomi. Eksplorasjon = eksperiment, feilgrep. Eksploitering = meisterarbeid, gjentaking, perfeksjonering [michl_industridesign].
 
-**6.23** [Illustrasjon] **Parametrisk design**: Navigator = algoritme + designar (som definerer parameterrommet og tilpassingsfunksjonen). Formrom = det parametrisk definerte delrommet. Seleksjonstrykk = den eksplisitt formulerte tilpassingsfunksjonen. Eksplorasjon = parametervariasjon, Monte Carlo-sampling. Eksploitering = gradient descent [menges2013morphospaces].
-
-**6.24** [Illustrasjon] **Generativ AI-design**: Navigator = trena nevralt nettverk. Formrom = latent space. Seleksjonstrykk = treningsdata (implisitt) + prompts (eksplisitt) + menneskeleg evaluering. Tilpassingslandskap = den implisitte fordelinga av "gode" former i treningssettet. Eksplorasjon = høg temperatur, stokastisk sampling. Eksploitering = låg temperatur, deterministisk decoding.
-
-**6.25** [Illustrasjon] **Kulturell evolusjon**: Navigator = populasjonen. Formrom = det totale rommet av former kulturen kan produsere. Seleksjonstrykk = prestisjebias, kostnadssignal, mote. Tilpassingslandskap = den aggregerte kulturelle preferansestrukturen. Eksplorasjon = avantgarde, subkultur. Eksploitering = mainstream, masseproduksjon, kanonisering [sigaki2018entropy].
+**6.23** [Observasjon] Same analytiske skjema gjeld for parametrisk design (navigator = algoritme, formrom = parameterrom), generativ AI (navigator = nevralt nettverk, formrom = latent space), og kulturell evolusjon (navigator = populasjonen, formrom = det kulturelt moglege) [menges2013morphospaces; sigaki2018entropy]. At same vokabular passar er eit teikn på at modellen er fruktbar, ikkje eit bevis for at den er sann.
 
 **6.3** [Teorem: følger av 6.1] Kvar formgjevingsprosess kan evaluerast langs **fire aksar**:
 
@@ -393,17 +395,13 @@ der **x_lokal** er eit lokalt maksimum og **x_global** er eit betre globalt alte
 
 > *Logisk samanheng*: Proposisjonane 1-6 har bygd opp det fullstendige rammeverket. Proposisjon 7 trekkjer den endelege konsekvensen og grensene. Av to allereie etablerte premissar, at det finst fleire motstridande trykk (teorem 2.31) og at trykka endrar seg over tid (postulat 4.1), følger det at kvart objekt er eit provisorisk kompromiss. Denne slutninga krev berre det som allereie er postulert.
 
-**7.1** [Aksiom] **Postulat om stiavhengig tilpassingsverdi.** Tilpassingsverdien til ei form avheng ikkje berre av posisjonen i formrommet, men av vegen dit. Lat gamma : [0, T] -> M_C vere ein stig gjennom formrommet. Tilpassingsverdien er eit funksjonale over stigen:
+**7.1** [Aksiom] **Postulat om stiavhengig tilpassingsverdi.** Tilpassingsverdien til ei form avheng ikkje berre av posisjonen i formrommet, men av vegen dit. To identiske former med ulik produksjonshistorie har ulik kulturell verdi, ulik marknadsposisjon, ulikt potensial for å inspirere neste generasjon. [M: Postulat 9.1]
 
-> S[gamma] = integral frå 0 til T av g(gamma(t), gamma'(t), t) dt
-
-der g avheng av posisjonen gamma(t), endringsraten gamma'(t), og tida t. [M: Postulat 9.1]
-
-> *Grunngjeving*: Stiavhengigheita er ein empirisk observasjon, ikkje ein matematisk formalisme. To identiske stolar med ulik produksjonshistorie har ulik kulturell verdi, ulik marknadsposisjon, ulikt potensial for å inspirere neste generasjon. Originalverket og kopien okkuperer same punkt i formrommet men ulike posisjonar i det utvida rommet av former-med-historie. Kublers observasjon at "alt som vert laga no er anten ein kopi eller ein variant av noko som vart laga litt tidlegare" [kubler_shape] er ein formulering av same innsikt: posisjonen åleine er utilstrekkeleg, ein treng stigen.
+> *Grunngjeving*: Stiavhengigheita er ein empirisk observasjon. Originalverket og kopien okkuperer same punkt i formrommet men ulike posisjonar i det utvida rommet av former-med-historie. Kublers observasjon at alt som vert laga er anten ein kopi eller ein variant av noko som vart laga tidlegare [kubler_shape] er ein formulering av same innsikt: posisjonen åleine er utilstrekkeleg, ein treng stigen.
 
 > *Falsifiseringsvilkår*: Postulatet fell om identiske former med ulik produksjonshistorie konsekvent har same overlevings- og reproduksjonsrate i formgjevingsøkologien.
 
-**7.11** [Observasjon] **Mot ein variasjonsformulering.** Prinsippet om stasjonær verknad (deltaS = 0) styrer lys (Fermats prinsipp), mekanikk (Hamiltons prinsipp) og termodynamiske system (Kaila og Annila har vist at naturleg seleksjon kan forståast som entropimaksimering ekvivalent med minste verknad [kaila2008leastaction]). Det er ein open og uløyst konjaktur om same prinsipp styrer vegen gjennom formrommet: at den realiserte stigen er den som gjer S[gamma] stasjonær. For at denne konjakturen skal ha innhald, må integranden g spesifiserast for konkrete designprosessar. Denne spesifikasjonen manglar. Konjakturen er fruktbar som forskingsprogram, ikkje som ferdig teorem. [M: sjå Teorem 9.2, men merk at det formelle beviset kviler på antakingar som ikkje er verifiserte empirisk]
+**7.11** [Observasjon] **Mot ein variasjonsformulering.** Prinsippet om stasjonær verknad (deltaS = 0) styrer lys (Fermats prinsipp), mekanikk (Hamiltons prinsipp) og termodynamiske system (Kaila og Annila har vist at naturleg seleksjon kan forståast som entropimaksimering ekvivalent med minste verknad [kaila2008leastaction]). Det er ein open og uløyst konjektur om same prinsipp styrer vegen gjennom formrommet: at den realiserte stigen er den som gjer S[gamma] stasjonær. For at denne konjekturen skal ha innhald, må integranden g spesifiserast for konkrete designprosessar. Denne spesifikasjonen manglar. Konjekturen er fruktbar som forskingsprogram, ikkje som ferdig teorem. [M: sjå Teorem 9.2, men merk at det formelle beviset kviler på antakingar som ikkje er verifiserte empirisk]
 
 **7.12** [Teorem: følger av 7.1 og 4.2] **Prosessen er produktet.** At tilpassingsverdien avheng av stigen (7.1) og at stigen endrar landskapet undervegs (4.2, landskapsminne), betyr at å gje form ikkje er å finne den beste posisjonen, men å realisere den beste *vegen*. Prosessen er ikkje berre middelet til resultatet; prosessen *modifiserer* kva resultat som er moglege, fordi kvar realisert form endrar landskapet for neste form. [M: Teorem 9.3]
 
@@ -445,9 +443,9 @@ For kvart steg opp treng ein *mindre kunnskap om systemets indre* og *meir kommu
 
 ---
 
-## 8  Materialaffordanse er det sterkaste seleksjonstrykket i det observerte datasettet.
+## Empiri: Materialaffordanse er det sterkaste seleksjonstrykket i det observerte datasettet.
 
-> *Logisk samanheng*: Proposisjonane 1-7 er det deduktive rammeverket. Proposisjon 8 er ein empirisk proposisjon: ho presenterer det viktigaste empiriske funnet frå STOLAR-datasettet og viser korleis det passar inn i rammeverket. Ho følger ikkje logisk frå dei foregåande proposisjonane; ho *illustrerer* dei. At materialet er det sterkaste trykket er eit resultat av dataanalyse, ikkje av deduktiv slutning.
+> *Logisk samanheng*: Proposisjonane 1-7 er det deduktive rammeverket. Det som følger er empirisk: det presenterer det viktigaste funnet frå STOLAR-datasettet og viser korleis det passar inn i rammeverket. Påstandane følger ikkje logisk frå dei foregåande proposisjonane; dei illustrerer dei.
 
 **8.1** [Aksiom] **Postulat om geometrisk signatur**: Kvart materiale m induserer ei ikkje-uniform sannsynlegheitsfordeling over geometriar [M: Postulat 5.1]:
 
@@ -476,7 +474,7 @@ Materialet trekkjer forma mot visse konfigurasjonar og motset seg andre.
 
 **8.15** [Illustrasjon] **Mahognitoppen**: I perioden 1825-1850 inneheldt 93 prosent av alle registrerte norskproduserte stolar i nasjonalmuseet mahogni. Materialentropien, eit informasjonsteoretisk mål på mangfald, kollapsa frå 2,5 til 1,5 bit. Heile designlandskapet konvergerte mot éin topp: ein klassisk lokal optimum der eitt seleksjonstrykk var så dominant at alt anna forsvann [gonzalez2004mahogany; aftenposten_klassiker].
 
-**8.16** [Observasjon] 42 prosent av mahognistolane i det norskproduserte delsettet kombinerer importert mahogni med lokalt tre: mahogni utanpå, furu inni. Stolen er *kolonialt finert*: globalt prestisjetømmer dekkjer lokal struktur. Materialkurva er eit komprimert verdskart. Kvar stol er ein geopolitisk artefakt [gonzalez2004mahogany].
+**8.16** [Illustrasjon] 42 prosent av mahognistolane i det norskproduserte delsettet kombinerer importert mahogni med lokalt tre: mahogni utanpå, furu inni. Globalt prestisjetømmer dekkjer lokal struktur. Materialkurva er eit komprimert verdskart [gonzalez2004mahogany].
 
 **8.17** [Observasjon] Forma oppstår i dialogen mellom navigator og materiale. Når ein handverkar slår med eit stemmejarn i ein eikestokk og kjenner motstanden, er det to system som forhandlar: handverkarens taktile sensorikk og materialets fysiske respons. Konvergensen mellom topologisk optimering og biologisk beinvekst under same fysiske gradientar er empirisk evidens for at tilpassingslandskapet er reelt og substrat-uavhengig [thompson1917growth; levin2026patterns].
 
@@ -491,6 +489,7 @@ Materialet trekkjer forma mot visse konfigurasjonar og motset seg andre.
 | 1.1 (formrom) | Def. 1.1, 1.2 |
 | 1.13 (regiontypologi) | Def. 1.3 |
 | 1.14 (forklaringskrav) | Prop. 1.4 |
+| 2.011 (avgrensing vs. seleksjon) | - (ny, ikkje i MATHEMATICA) |
 | 2.1 (seleksjonstrykk) | Def. 2.1 |
 | 2.14 (seleksjonstrykkvektoren) | Def. 2.2 |
 | 2.2 (fleire trykk) | Postulat 2.3 |
@@ -506,10 +505,12 @@ Materialet trekkjer forma mot visse konfigurasjonar og motset seg andre.
 | 4.1 (dynamisk landskap) | Postulat 4.1 |
 | 4.11 (punktert likevekt) | Teorem 4.2 |
 | 4.2 (landskapsminne) | Def. 4.3 |
+| 4.3 (strukturert fordeling krev navigasjon) | - (ny, ikkje i MATHEMATICA) |
 | 5.1 (navigator) | Def. 6.1 |
 | 5.2 (grenseflate) | Def. 6.2 |
 | 5.3 (intelligens) | Def. 6.3 |
 | 5.12 (substrat-uavhengigheit) | Postulat 7.1, Teorem 7.2 |
+| 5.621 (grensa for navigatorbegrepet) | - (ny, ikkje i MATHEMATICA) |
 | 6.1 (generell lov) | Kap. 7, samanfatning |
 | 7.1 (stasjonær verknad) | Postulat 9.1 |
 | 7.11 (stasjonær veg) | Teorem 9.2 |
@@ -518,7 +519,7 @@ Materialet trekkjer forma mot visse konfigurasjonar og motset seg andre.
 | 7.4 (provisorisk kompromiss) | Teorem 10.1 |
 | 7.5 (varige tradisjonar) | Teorem 10.2 |
 | 5.62 (emergent navigasjon) | Teorem 8.1 |
-| 7.61 (refleksiv navigasjon) | — (ny, ikkje i MATHEMATICA) |
+| 7.61 (refleksiv navigasjon) | - (ny, ikkje i MATHEMATICA) |
 | 7.7 (falsifiserbarheit) | Teorem 10.3 |
 | 8.1 (geometrisk signatur) | Postulat 5.1 |
 | 8.11 (informasjonsteoremet) | Teorem 5.2 |

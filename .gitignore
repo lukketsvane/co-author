@@ -36,7 +36,7 @@ projects/*/log/
 projects/*/sessions/
 
 # Referansemateriale (store filer)
-projects/*/context/*.pdf
+# projects/*/context/*.pdf
 projects/*/context/*.epub
 projects/*/context/*.png
 projects/*/context/*.jpg
